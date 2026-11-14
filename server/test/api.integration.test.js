@@ -25,7 +25,7 @@ async function setup() {
     const headers = {};
     if (token) headers.Authorization = `Bearer ${token}`;
     let payload = body;
-    if (body !== undefined) headers['content-type'] = 'application/json';
+    if (body !== undefined) { headers['content-type'] = 'application/json'; payload = JSON.stringify(body); }
     if (form) payload = form;
     const response = await fetch(base + url, { method, headers, body: payload });
     const text = await response.text();

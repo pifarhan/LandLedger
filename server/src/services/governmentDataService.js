@@ -55,6 +55,13 @@ function getStateLandCoverage(query = '') {
 }
 function getAcquisitionData(stateCode) {
   const acquisition = read('land_acquisition_national.json');
+  const importsPath = path.join(DATA_DIR, 'land_acquisition_imports.json');
+  const imports = fs.existsSync(importsPath) ? JSON.parse(fs.readFileSync(importsPath, 'utf8')) : { records: [] };
+  acquisition.records = [...(acquisition.records || []), ...(imports.records || [])];
+  acquisition.coverageByState = (acquisition.coverageByState || []).map((row) => {
+    const rows = acquisition.records.filter((record) => record.stateCode === row.stateCode);
+    return { ...row, importedRecordCount: rows.length, parcelIdentifiedRecordCount: rows.filter((record) => (record.parcelIdentifiers || []).length).length, ...(rows.length ? { status: 'partial_import_official_rows' } : {}) };
+  });
   const notices = read('land_acquisition_notices.json');
   if (!stateCode) return { dataset: acquisition.dataset, nationalTotals: acquisition.metrics, coverage: acquisition.coverageByState, records: acquisition.records, notices: notices.records, reportUrl: acquisition.stateReport.url, scope: acquisition.scope };
   const state = acquisition.coverageByState.find((r) => norm(r.stateCode) === norm(stateCode) || norm(r.state) === norm(stateCode));

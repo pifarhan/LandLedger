@@ -42,6 +42,7 @@ Open `http://localhost:5173`; the API defaults to `http://localhost:5000/api`. T
 | `server/data/land_acquisition_national.json` | LACRRIS national dashboard snapshot, 36 report selectors and 2 detailed Delhi award imports | Not all State/UT cases; award amount is not proof of payment; no universal acquired-parcel join |
 | `server/data/land_acquisition_notices.json` | 58 selected notice/catalogue entries, including 19 Delhi award PDF entries | Selected references, not an exhaustive nationwide case census |
 | `server/data/land_acquisition_awards_extracted.json/.csv` | Two human-reviewed GNCTD award documents with selected schedule references | Not complete award schedules, not current title certificates, not payment proof |
+| `server/data/land_acquisition_imports.json` | Runtime authority imports of source-backed acquisition case rows | Kept separate from checksum-verified bundled snapshots; does not modify national dashboard totals |
 | `server/data/parcel_ownership_evidence.json` | Evidence store and schema | 0 named owner/parcel rows bundled; empty until lawful source-backed import |
 | `server/data/manifest.json` and `CHECKSUMS.sha256` | SHA-256 integrity manifest for 41 selected public/reference data files plus raw ABDB RAR checksum | Integrity after capture, not source truth/legal authenticity |
 

@@ -24,3 +24,5 @@ research/trained-model/
 .DS_Store
 # Large research datasets
 /server/data/abdb/raw/*.rar
+# Local authority imports may contain non-public case metadata; keep out of Git.
+server/data/land_acquisition_imports.json

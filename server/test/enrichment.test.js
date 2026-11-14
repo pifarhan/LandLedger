@@ -152,7 +152,7 @@ test('isolated import pipeline requires real server-side source inspection befor
 });
 
 test('acquisition imports preserve parcel identifiers and require evidence for each claimed milestone', (t) => {
-  const { mkdtempSync, mkdirSync, copyFileSync, rmSync } = require('node:fs');
+  const { mkdtempSync, mkdirSync, copyFileSync, readFileSync, rmSync } = require('node:fs');
   const { tmpdir } = require('node:os');
   const tempRoot = mkdtempSync(path.join(tmpdir(), 'landledger-v18-acq-test-'));
   t.after(() => rmSync(tempRoot, { recursive: true, force: true }));
@@ -163,9 +163,16 @@ test('acquisition imports preserve parcel identifiers and require evidence for e
   copyFileSync(path.join(__dirname, '../src/services/governmentEnrichmentService.js'), path.join(serviceDir, 'governmentEnrichmentService.js'));
   const isolated = require(path.join(serviceDir, 'governmentEnrichmentService.js'));
   const base = { stateCode: 'WB', district: 'Jalpaiguri', projectName: 'Railway line', sourceAuthority: 'eGazette', sourceReference: 'CASE-WB-1', officialCaseId: 'CASE-WB-1', sourceUrl: 'https://egazette.gov.in/archives/notice.pdf', parcelIdentifiers: ['Survey No. 42/3'] };
+  const snapshotPath = path.join(dataDir, 'land_acquisition_national.json');
+  const snapshotBefore = readFileSync(snapshotPath, 'utf8');
   assert.throws(() => isolated.importAcquisitionRecords([{ ...base, acquisitionStage: 'AWARD_ISSUED' }]), /stageEvidenceReference/);
   const result = isolated.importAcquisitionRecords([{ ...base, acquisitionStage: 'NOTIFIED', stageEvidenceReference: 'GAZ-WB-2026-1', stageEvidenceUrl: base.sourceUrl, stageEvidenceDate: '2026-11-13' }]);
   assert.equal(result.inserted, 1);
   assert.deepEqual(result.records[0].parcelIdentifiers, ['Survey No. 42/3']);
   assert.equal(result.records[0].recordStatus, 'IMPORTED_PUBLIC_SOURCE_UNVERIFIED');
+  assert.equal(readFileSync(snapshotPath, 'utf8'), snapshotBefore, 'official bundled snapshot remains byte-for-byte unchanged');
+  const overlay = JSON.parse(readFileSync(path.join(dataDir, 'land_acquisition_imports.json'), 'utf8'));
+  assert.equal(overlay.records.length, 1);
+  assert.equal(overlay.importLog[0].insertedRows, 1);
+  assert.equal(isolated.searchAcquisitionRecords({ state: 'WB' }).length, 1, 'search includes authority-imported records');
 });
