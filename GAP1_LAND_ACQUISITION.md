@@ -18,5 +18,8 @@ This does not complete a nationwide acquisition register. State-specific project
 
 - Acquisition and government data tests: 15 passed.
 - Official data verifier: passed, including the existing 41-file checksum manifest.
-- Full backend test suite: 45 tests passed; API integration test could not load because `bcryptjs` is declared but not installed in this workspace.
+- Full backend test suite: 48 passed, 0 failed. The API test helper now serializes JSON request bodies correctly.
+- Static security audit: 14/14 controls passed; security verification: 10/10 controls passed. These are source-level checks, not penetration tests.
+- The server lockfile was synchronized with the already-declared Fabric dependencies so `npm ci` could install the complete server dependency set; no `package.json` version ranges changed.
+- `npm ci` reported 6 dependency advisories (3 moderate, 2 high, 1 critical). A follow-up `npm audit` could not retrieve advisory details because `registry.npmjs.org` failed DNS resolution. No automated dependency upgrades were applied.
 - No live government endpoint or credentialed integration was tested.
