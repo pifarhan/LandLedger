@@ -8,6 +8,7 @@ const FILES = {
   clr: 'dilrmp_state_level_current.json',
   portals: 'state_record_portals.json',
   acquisition: 'land_acquisition_national.json',
+  acquisitionImports: 'land_acquisition_imports.json',
   notices: 'land_acquisition_notices.json',
   legacyMap: 'dilrmp_map_legacy_mis3.json',
   parcelEvidence: 'parcel_ownership_evidence.json'
@@ -17,6 +18,23 @@ function readJson(name) {
   const file = path.join(DATA_DIR, name);
   if (!fs.existsSync(file)) throw new Error(`Required data file is missing: ${name}`);
   return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+function readAcquisitionDataset() {
+  const snapshot = readJson(FILES.acquisition);
+  const operational = fs.existsSync(path.join(DATA_DIR, FILES.acquisitionImports))
+    ? readJson(FILES.acquisitionImports)
+    : { records: [], importLog: [] };
+  const records = [...(snapshot.records || []), ...(operational.records || [])];
+  const coverageByState = (snapshot.coverageByState || []).map((state) => {
+    const rows = records.filter((row) => row.stateCode === state.stateCode);
+    return {
+      ...state,
+      importedRecordCount: rows.length,
+      parcelIdentifiedRecordCount: rows.filter((row) => (row.parcelIdentifiers || []).length).length,
+      ...(rows.length ? { status: 'partial_import_official_rows' } : {})
+    };
+  });
+  return { ...snapshot, records, coverageByState, importLog: operational.importLog || [] };
 }
 function atomicWrite(name, value) {
   const file = path.join(DATA_DIR, name);
@@ -94,7 +112,7 @@ function forbiddenPersonalKeys(record) {
 function getEnrichmentDashboard(query = '') {
   const registry = readJson(FILES.registry);
   const portals = readJson(FILES.portals);
-  const acquisition = readJson(FILES.acquisition);
+  const acquisition = readAcquisitionDataset();
   const notices = readJson(FILES.notices);
   const legacyMap = readJson(FILES.legacyMap);
   const clr = readJson(FILES.clr);
@@ -133,7 +151,7 @@ function getEnrichmentDashboard(query = '') {
 }
 
 function searchAcquisitionRecords(filters = {}) {
-  const data = readJson(FILES.acquisition);
+  const data = readAcquisitionDataset();
   const needle = normalise(filters.q);
   const state = stateByCode(filters.state || filters.stateCode);
   if ((filters.state || filters.stateCode) && !state) throw new Error('Unknown State/UT. Use a valid State/UT code or name.');
@@ -148,7 +166,10 @@ function importAcquisitionRecords(inputRecords, { sourceSha256 = null, importedB
   if (!Array.isArray(inputRecords) || inputRecords.length < 1 || inputRecords.length > 2000) throw new Error('Import must contain between 1 and 2,000 acquisition rows.');
   const registry = readJson(FILES.registry);
   const data = readJson(FILES.acquisition);
-  const existing = Array.isArray(data.records) ? data.records : [];
+  const operational = fs.existsSync(path.join(DATA_DIR, FILES.acquisitionImports))
+    ? readJson(FILES.acquisitionImports)
+    : { dataset: 'land_acquisition_authority_imports', generatedOn: null, records: [], importLog: [] };
+  const existing = [...(data.records || []), ...(operational.records || [])];
   const seen = new Set(existing.map((row) => row.recordKey));
   const imported = [], duplicates = [];
   const allowedStages = new Set(['UNKNOWN','SIA','PRELIMINARY_NOTIFIED','NOTIFIED','INTENTION_TO_ACQUIRE_PUBLISHED','DECLARATION_PUBLISHED','AWARD_ENQUIRY','AWARD_ISSUED','COMPENSATION_PAID','POSSESSION_TAKEN','WITHDRAWN','RELEASED','COMPENSATION_REDETERMINATION']);
@@ -233,15 +254,11 @@ function importAcquisitionRecords(inputRecords, { sourceSha256 = null, importedB
     seen.add(recordKey);
     imported.push({ ...body, recordKey, recordSha256: digest(body) });
   }
-  data.records = [...existing, ...imported];
-  data.importLog = [...(data.importLog || []), { importedAt: new Date().toISOString(), importedBy, receivedRows: inputRecords.length, insertedRows: imported.length, duplicateRows: duplicates.length, sourceSha256 }].slice(-200);
-  for (const state of data.coverageByState || []) {
-    const rows = data.records.filter((row) => row.stateCode === state.stateCode);
-    state.importedRecordCount = rows.length;
-    state.parcelIdentifiedRecordCount = rows.filter((row) => (row.parcelIdentifiers || []).length).length;
-    if (rows.length) state.status = 'partial_import_official_rows';
-  }
-  atomicWrite(FILES.acquisition, data);
+  operational.records = [...(operational.records || []), ...imported];
+  operational.generatedOn = new Date().toISOString();
+  operational.importLog = [...(operational.importLog || []), { importedAt: new Date().toISOString(), importedBy, receivedRows: inputRecords.length, insertedRows: imported.length, duplicateRows: duplicates.length, sourceSha256 }].slice(-200);
+  operational.scope = 'Authority-imported source records are stored separately from the checksum-verified bundled LACRRIS snapshot. These rows do not alter or apportion national totals.';
+  atomicWrite(FILES.acquisitionImports, operational);
   return { inserted: imported.length, duplicates: duplicates.length, records: imported, duplicateRows: duplicates };
 }
 
