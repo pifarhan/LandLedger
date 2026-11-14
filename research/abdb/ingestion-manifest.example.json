@@ -1,0 +1,10 @@
+{
+  "source": "Survey of India ABDB",
+  "downloaded_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "source_url": "https://surveyofindia.gov.in/documents/State_District_Subdistrict_PAN%20INDIA.rar",
+  "original_filename": "State_District_Subdistrict_PAN INDIA.rar",
+  "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+  "format": ["SHP", "GDB"],
+  "license_or_access_note": "Use the official Survey of India terms shown on the source page.",
+  "transformation": "None before archival; derived GeoJSON/lookup tables must retain source hash."
+}

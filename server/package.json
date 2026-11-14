@@ -1,0 +1,36 @@
+{
+  "name": "land-record-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "test": "node --test test/*.test.js",
+    "research:evaluate": "node ../research/evaluate.mjs",
+    "abdb:build": "python ../research/abdb/build-abdb-hierarchy.py data/abdb/extracted data/abdb/abdb-hierarchy.json data/official-state-ut-registry.json",
+    "verify:official-data": "node ../research/verify-official-data.mjs",
+    "research:security": "node ../research/security-audit.mjs",
+    "research:ml-train": "python ../research/train-authorised-fraud-model.py",
+    "research:ml-self-test": "python ../research/train-authorised-fraud-model.py --self-test",
+    "fabric:preflight": "bash ../fabric/network/preflight.sh"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "pg": "^8.13.1",
+    "@grpc/grpc-js": "^1.13.4",
+    "@hyperledger/fabric-gateway": "^1.8.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  },
+  "overrides": {
+    "qs": "6.16.0"
+  }
+}

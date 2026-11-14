@@ -1,0 +1,189 @@
+{
+  "dataset": "DILRMP CLR village-level historical source subset (Karnataka and West Bengal)",
+  "authority": "Department of Land Resources, Government of India",
+  "source": "https://dilrmp.gov.in/dilrmpold/PhyscialComponent/CLR/village-level/5602",
+  "retrievedAt": "2026-11-14",
+  "scope": "Historical source-derived village-level extract with 14 records from Karnataka and West Bengal only. Status/entry dates are in July/August 2024. Retrieval/packaging on 14-Nov-2026 does not make the source records current. It is not a private ownership database and contains no personal owner names.",
+  "records": [
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Adur",
+      "totalRor": 433,
+      "landOwnersHolders": 762,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 88,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Ambalipura",
+      "totalRor": 104,
+      "landOwnersHolders": 307,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-07-31"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Anagalapura",
+      "totalRor": 222,
+      "landOwnersHolders": 404,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Avalahalli",
+      "totalRor": 253,
+      "landOwnersHolders": 708,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 1,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Bairathi",
+      "totalRor": 386,
+      "landOwnersHolders": 828,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Balagere",
+      "totalRor": 398,
+      "landOwnersHolders": 985,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 31,
+      "statusEntryDate": "2024-07-31"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Bangalore East",
+      "village": "Banasawadi K G",
+      "totalRor": 839,
+      "landOwnersHolders": 1512,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-07-31"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Yalahanka",
+      "village": "Adde Vishwanathapura",
+      "totalRor": 1158,
+      "landOwnersHolders": 1954,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 43,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Yalahanka",
+      "village": "Adiganahalli",
+      "totalRor": 394,
+      "landOwnersHolders": 704,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 34,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Yalahanka",
+      "village": "Agrahara",
+      "totalRor": 339,
+      "landOwnersHolders": 783,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 26,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "Karnataka",
+      "district": "Bengaluru Urban",
+      "tehsil": "Yalahanka",
+      "village": "Amruthahalli K G",
+      "totalRor": 458,
+      "landOwnersHolders": 1065,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-08-01"
+    },
+    {
+      "state": "West Bengal",
+      "district": "Howrah",
+      "tehsil": "Amta - II",
+      "village": "Ajangachhi",
+      "totalRor": 2456,
+      "landOwnersHolders": 0,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-07-26"
+    },
+    {
+      "state": "West Bengal",
+      "district": "Howrah",
+      "tehsil": "Amta - II",
+      "village": "Amragari",
+      "totalRor": 1676,
+      "landOwnersHolders": 0,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-07-26"
+    },
+    {
+      "state": "West Bengal",
+      "district": "Howrah",
+      "tehsil": "Amta - II",
+      "village": "Bankura",
+      "totalRor": 1233,
+      "landOwnersHolders": 0,
+      "rorDataEntry": "Completed",
+      "mutationWorkflow": "Done",
+      "digitallySignedRor": 0,
+      "statusEntryDate": "2024-07-26"
+    }
+  ],
+  "sourceDataPeriod": {
+    "earliestStatusEntryDate": "2024-07-26",
+    "latestStatusEntryDate": "2024-08-01"
+  },
+  "coverage": {
+    "records": 14,
+    "states": [
+      "Karnataka",
+      "West Bengal"
+    ],
+    "scope": "historical_village_level_subset_not_all_india"
+  }
+}

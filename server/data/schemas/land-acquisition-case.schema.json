@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Land Acquisition Case Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stateCode",
+    "projectName",
+    "district",
+    "areaHectares",
+    "sourceUrl",
+    "retrievedAt",
+    "recordStatus"
+  ],
+  "properties": {
+    "stateCode": {
+      "type": "string"
+    },
+    "projectName": {
+      "type": "string"
+    },
+    "underAct": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "landRequiringBody": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "district": {
+      "type": "string"
+    },
+    "ruralOrUrban": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "areaHectares": {
+      "type": "number",
+      "minimum": 0
+    },
+    "notificationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "publicationDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "awardDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "paymentDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "possessionDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "projectDisplacedFamilies": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "projectAffectedFamilies": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "compensationINR": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "rehabilitationResettlementINR": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "officialCaseId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parcelIdentifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recordStatus": {
+      "enum": [
+        "SIA",
+        "NOTIFIED",
+        "PUBLISHED",
+        "AWARDED",
+        "PAYMENT_IN_PROGRESS",
+        "COMPENSATION_PAID",
+        "POSSESSION_TAKEN",
+        "WITHDRAWN",
+        "RELEASED",
+        "UNKNOWN"
+      ]
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "retrievedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reportedBy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidenceSha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "dataset": "NGDRS national dashboard – State/UT-wise registration activity",
+  "authority": "Department of Land Resources / National Generic Document Registration System, Government of India",
+  "source": "https://ngdrs.gov.in/NGDRS_Website/data-grid.php?lang=en",
+  "retrievedAt": "2026-11-13",
+  "sourceGeneratedAt": "2026-11-13T16:09:00+05:30",
+  "period": {
+    "start": "2017-01-01",
+    "end": "2026-11-12"
+  },
+  "scope": "Aggregate document registration activity reported by State/UT registration systems. Not individual parcel ownership, title, deed contents, mutation or land record database.",
+  "coverage": {
+    "jurisdictions": 36,
+    "rowsReported": 26,
+    "rowsNotReported": 10
+  },
+  "nationalTotals": {
+    "sourceGeneratedAt": "2026-11-13T16:09:00+05:30",
+    "periodStart": "2017-01-01",
+    "periodEnd": "2026-11-12",
+    "reportingRows": 26,
+    "sroOffices": 3119,
+    "documentsSubmitted": 65035865,
+    "appointments": 30484559,
+    "documentsRegistered": 60837981,
+    "revenueCollectionLakh": 34829834.78,
+    "note": "Official dashboard total. Sum of displayed per-State/UT rounded revenue cells is INR 0.01 lakh lower; retain the dashboard's published aggregate total."
+  },
+  "records": [
+    {
+      "stateCode": "AN",
+      "state": "Andaman & Nicobar Islands",
+      "lgdCode": 35,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2018-06-29",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-11",
+        "sroOffices": 5,
+        "documentsSubmitted": 9658,
+        "appointments": 9492,
+        "documentsRegistered": 5246,
+        "revenueCollectionLakh": 20676.76
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "AP",
+      "state": "Andhra Pradesh",
+      "lgdCode": 28,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "CARD",
+        "lastSyncDate": "2024-07-14",
+        "sroOffices": 296,
+        "documentsSubmitted": 16876674,
+        "appointments": 0,
+        "documentsRegistered": 16240103,
+        "revenueCollectionLakh": 5182025.24
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "AR",
+      "state": "Arunachal Pradesh",
+      "lgdCode": 12,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2025-02-04",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 2,
+        "documentsSubmitted": 38,
+        "appointments": 371,
+        "documentsRegistered": 334,
+        "revenueCollectionLakh": 5047.05
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "AS",
+      "state": "Assam",
+      "lgdCode": 18,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2022-11-14",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 77,
+        "documentsSubmitted": 467950,
+        "appointments": 493859,
+        "documentsRegistered": 449281,
+        "revenueCollectionLakh": 152867.98
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "BR",
+      "state": "Bihar",
+      "lgdCode": 10,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "CH",
+      "state": "Chandigarh",
+      "lgdCode": 4,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2025-01-16",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-01-22",
+        "sroOffices": 1,
+        "documentsSubmitted": 1158,
+        "appointments": 13262,
+        "documentsRegistered": 10458,
+        "revenueCollectionLakh": 37224.92
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "CG",
+      "state": "Chhattisgarh",
+      "lgdCode": 22,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-12-22",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 122,
+        "documentsSubmitted": 7374,
+        "appointments": 1053631,
+        "documentsRegistered": 936865,
+        "revenueCollectionLakh": 1016824.9
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "GA",
+      "state": "Goa",
+      "lgdCode": 30,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2019-02-04",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 12,
+        "documentsSubmitted": 182106,
+        "appointments": 181843,
+        "documentsRegistered": 179221,
+        "revenueCollectionLakh": 658460.62
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "GJ",
+      "state": "Gujarat",
+      "lgdCode": 24,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "GARVI",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 287,
+        "documentsSubmitted": 7212690,
+        "appointments": 8172684,
+        "documentsRegistered": 7289572,
+        "revenueCollectionLakh": 6325658.3
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "HR",
+      "state": "Haryana",
+      "lgdCode": 6,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "Web-HALRIS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 143,
+        "documentsSubmitted": 4745357,
+        "appointments": 5013865,
+        "documentsRegistered": 3851727,
+        "revenueCollectionLakh": 3323830.4
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "HP",
+      "state": "Himachal Pradesh",
+      "lgdCode": 2,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2019-09-12",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 192,
+        "documentsSubmitted": 898171,
+        "appointments": 895404,
+        "documentsRegistered": 887374,
+        "revenueCollectionLakh": 246164.45
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "JK",
+      "state": "Jammu & Kashmir",
+      "lgdCode": 1,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-06-15",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 87,
+        "documentsSubmitted": 483190,
+        "appointments": 493348,
+        "documentsRegistered": 468247,
+        "revenueCollectionLakh": 337580.05
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "JH",
+      "state": "Jharkhand",
+      "lgdCode": 20,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2018-10-24",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-08-16",
+        "sroOffices": 42,
+        "documentsSubmitted": 1067884,
+        "appointments": 1057762,
+        "documentsRegistered": 1051899,
+        "revenueCollectionLakh": 745319.27
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "KA",
+      "state": "Karnataka",
+      "lgdCode": 29,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "KL",
+      "state": "Kerala",
+      "lgdCode": 32,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "LA",
+      "state": "Ladakh",
+      "lgdCode": 37,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2021-11-16",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-02-24",
+        "sroOffices": 14,
+        "documentsSubmitted": 4151,
+        "appointments": 4113,
+        "documentsRegistered": 3796,
+        "revenueCollectionLakh": 1482.53
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "LD",
+      "state": "Lakshadweep",
+      "lgdCode": 31,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "MP",
+      "state": "Madhya Pradesh",
+      "lgdCode": 23,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "lgdCode": 27,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-02-10",
+        "system": "iSarita 1.9 / iSarita 2.0 (NGDRS)",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 498,
+        "documentsSubmitted": 407330,
+        "appointments": 1539,
+        "documentsRegistered": 403156,
+        "revenueCollectionLakh": 261977.01
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "MN",
+      "state": "Manipur",
+      "lgdCode": 14,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2018-07-13",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-06-10",
+        "sroOffices": 16,
+        "documentsSubmitted": 25532,
+        "appointments": 25556,
+        "documentsRegistered": 21817,
+        "revenueCollectionLakh": 2046.53
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "ML",
+      "state": "Meghalaya",
+      "lgdCode": 17,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "MZ",
+      "state": "Mizoram",
+      "lgdCode": 15,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2019-09-06",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-10-18",
+        "sroOffices": 7,
+        "documentsSubmitted": 58552,
+        "appointments": 58374,
+        "documentsRegistered": 51605,
+        "revenueCollectionLakh": 6347.13
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "NL",
+      "state": "Nagaland",
+      "lgdCode": 13,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "DL",
+      "state": "NCT of Delhi",
+      "lgdCode": 7,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2023-08-28",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 39,
+        "documentsSubmitted": 1097133,
+        "appointments": 1110020,
+        "documentsRegistered": 1053413,
+        "revenueCollectionLakh": 2198645.87
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "OD",
+      "state": "Odisha",
+      "lgdCode": 21,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "e-Registration Odisha",
+        "lastSyncDate": "2024-06-30",
+        "sroOffices": 191,
+        "documentsSubmitted": 1066677,
+        "appointments": 1066677,
+        "documentsRegistered": 1002189,
+        "revenueCollectionLakh": 427087.02
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "PY",
+      "state": "Puducherry",
+      "lgdCode": 34,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "ePathiram",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 10,
+        "documentsSubmitted": 348451,
+        "appointments": 302403,
+        "documentsRegistered": 335775,
+        "revenueCollectionLakh": 171347.62
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "PB",
+      "state": "Punjab",
+      "lgdCode": 3,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2017-06-26",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 188,
+        "documentsSubmitted": 6448911,
+        "appointments": 6270676,
+        "documentsRegistered": 5833883,
+        "revenueCollectionLakh": 494795.63
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "RJ",
+      "state": "Rajasthan",
+      "lgdCode": 8,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "Epanjiyan",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 669,
+        "documentsSubmitted": 9841895,
+        "appointments": 0,
+        "documentsRegistered": 6982214,
+        "revenueCollectionLakh": 3664482.41
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "SK",
+      "state": "Sikkim",
+      "lgdCode": 11,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "TN",
+      "state": "Tamil Nadu",
+      "lgdCode": 33,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "TS",
+      "state": "Telangana",
+      "lgdCode": 36,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "CARD",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 144,
+        "documentsSubmitted": 11979139,
+        "appointments": 2631951,
+        "documentsRegistered": 11979139,
+        "revenueCollectionLakh": 8381823.7
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "DN",
+      "state": "Dadra & Nagar Haveli and Daman & Diu",
+      "lgdCode": 38,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-01-04",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 1,
+        "documentsSubmitted": 46267,
+        "appointments": 46085,
+        "documentsRegistered": 45772,
+        "revenueCollectionLakh": 32954.69
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "TR",
+      "state": "Tripura",
+      "lgdCode": 16,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2021-06-11",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-09-02",
+        "sroOffices": 23,
+        "documentsSubmitted": 163823,
+        "appointments": 163738,
+        "documentsRegistered": 159914,
+        "revenueCollectionLakh": 45727.28
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "UK",
+      "state": "Uttarakhand",
+      "lgdCode": 5,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "CRS",
+        "lastSyncDate": "2024-10-04",
+        "sroOffices": 53,
+        "documentsSubmitted": 1595754,
+        "appointments": 1417906,
+        "documentsRegistered": 1594981,
+        "revenueCollectionLakh": 1089437.41
+      },
+      "reportingStatus": "reported"
+    },
+    {
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "lgdCode": 9,
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "reportingStatus": "not_reported_in_this_snapshot"
+    },
+    {
+      "stateCode": "WB",
+      "state": "West Bengal",
+      "lgdCode": 19,
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "e-Nathikaran",
+        "lastSyncDate": "2026-07-20",
+        "sroOffices": 0,
+        "documentsSubmitted": 0,
+        "appointments": 0,
+        "documentsRegistered": 0,
+        "revenueCollectionLakh": 0.0
+      },
+      "reportingStatus": "reported"
+    }
+  ],
+  "dataInterpretation": "A dashboard value of zero is retained as a reported source value; it is not interpreted as evidence that the jurisdiction has no real-world registrations."
+}

@@ -1,0 +1,37 @@
+﻿stateCode,state,lgdCode,reportingStatus,system,launchDate,lastSyncDate,sroOffices,documentsSubmitted,appointments,documentsRegistered,revenueCollectionLakh
+AN,Andaman & Nicobar Islands,35,reported,NGDRS,2018-06-29,2026-11-11,5,9658,9492,5246,20676.76
+AP,Andhra Pradesh,28,reported,CARD,,2024-07-14,296,16876674,0,16240103,5182025.24
+AR,Arunachal Pradesh,12,reported,NGDRS,2025-02-04,2026-11-12,2,38,371,334,5047.05
+AS,Assam,18,reported,NGDRS,2022-11-14,2026-11-12,77,467950,493859,449281,152867.98
+BR,Bihar,10,not_reported_in_this_snapshot,,,,,,,,
+CH,Chandigarh,4,reported,NGDRS,2025-01-16,2026-01-22,1,1158,13262,10458,37224.92
+CG,Chhattisgarh,22,reported,NGDRS,2020-12-22,2026-11-12,122,7374,1053631,936865,1016824.9
+GA,Goa,30,reported,NGDRS,2019-02-04,2026-11-12,12,182106,181843,179221,658460.62
+GJ,Gujarat,24,reported,GARVI,,2026-11-12,287,7212690,8172684,7289572,6325658.3
+HR,Haryana,6,reported,Web-HALRIS,,2026-11-12,143,4745357,5013865,3851727,3323830.4
+HP,Himachal Pradesh,2,reported,NGDRS,2019-09-12,2026-11-12,192,898171,895404,887374,246164.45
+JK,Jammu & Kashmir,1,reported,NGDRS,2020-06-15,2026-11-12,87,483190,493348,468247,337580.05
+JH,Jharkhand,20,reported,NGDRS,2018-10-24,2026-08-16,42,1067884,1057762,1051899,745319.27
+KA,Karnataka,29,not_reported_in_this_snapshot,,,,,,,,
+KL,Kerala,32,not_reported_in_this_snapshot,,,,,,,,
+LA,Ladakh,37,reported,NGDRS,2021-11-16,2026-02-24,14,4151,4113,3796,1482.53
+LD,Lakshadweep,31,not_reported_in_this_snapshot,,,,,,,,
+MP,Madhya Pradesh,23,not_reported_in_this_snapshot,,,,,,,,
+MH,Maharashtra,27,reported,iSarita 1.9 / iSarita 2.0 (NGDRS),2020-02-10,2026-11-12,498,407330,1539,403156,261977.01
+MN,Manipur,14,reported,NGDRS,2018-07-13,2026-06-10,16,25532,25556,21817,2046.53
+ML,Meghalaya,17,not_reported_in_this_snapshot,,,,,,,,
+MZ,Mizoram,15,reported,NGDRS,2019-09-06,2026-10-18,7,58552,58374,51605,6347.13
+NL,Nagaland,13,not_reported_in_this_snapshot,,,,,,,,
+DL,NCT of Delhi,7,reported,NGDRS,2023-08-28,2026-11-12,39,1097133,1110020,1053413,2198645.87
+OD,Odisha,21,reported,e-Registration Odisha,,2024-06-30,191,1066677,1066677,1002189,427087.02
+PY,Puducherry,34,reported,ePathiram,,2026-11-12,10,348451,302403,335775,171347.62
+PB,Punjab,3,reported,NGDRS,2017-06-26,2026-11-12,188,6448911,6270676,5833883,494795.63
+RJ,Rajasthan,8,reported,Epanjiyan,,2026-11-12,669,9841895,0,6982214,3664482.41
+SK,Sikkim,11,not_reported_in_this_snapshot,,,,,,,,
+TN,Tamil Nadu,33,not_reported_in_this_snapshot,,,,,,,,
+TS,Telangana,36,reported,CARD,,2026-11-12,144,11979139,2631951,11979139,8381823.7
+DN,Dadra & Nagar Haveli and Daman & Diu,38,reported,NGDRS,2020-01-04,2026-11-12,1,46267,46085,45772,32954.69
+TR,Tripura,16,reported,NGDRS,2021-06-11,2026-09-02,23,163823,163738,159914,45727.28
+UK,Uttarakhand,5,reported,CRS,,2024-10-04,53,1595754,1417906,1594981,1089437.41
+UP,Uttar Pradesh,9,not_reported_in_this_snapshot,,,,,,,,
+WB,West Bengal,19,reported,e-Nathikaran,,2026-07-20,0,0,0,0,0.0

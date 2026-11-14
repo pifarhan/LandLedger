@@ -1,0 +1,17 @@
+{
+  "dataset": "Survey of India Administrative Boundary Data Base (ABDB)",
+  "authority": "Survey of India, Government of India",
+  "verified_on": "2026-11-14",
+  "official_landing_page": "https://surveyofindia.gov.in/pages/administrative-boundary-data-base-abdb-",
+  "state_district_subdistrict_pan_india": "https://surveyofindia.gov.in/documents/State_District_Subdistrict_PAN%20INDIA.rar",
+  "village_boundary_page": "https://surveyofindia.gov.in/pages/village-boundary-data-base-of-entire-india",
+  "notes": [
+    "ABDB is an authoritative administrative/geospatial boundary source, not a parcel-title or ownership database.",
+    "The State/District/Sub-District PAN-India archive is linked directly from the official ABDB page.",
+    "The Village Boundary page currently lists downloadable vector data by State/UT; the page should be used as the authoritative index rather than hard-coding an assumed 36-file list.",
+    "Do not use ABDB alone to infer legal ownership or title."
+  ],
+  "verified_direct_downloads": {
+    "west_bengal_village_vector": "https://surveyofindia.gov.in/documents/WEST_BENGAL.zip"
+  }
+}

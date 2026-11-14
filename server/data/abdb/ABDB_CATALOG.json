@@ -1,0 +1,88 @@
+{
+  "source": "https://surveyofindia.gov.in/pages/administrative-boundary-data-base-abdb-",
+  "dataset": "Survey of India ABDB State/District/Sub-District PAN INDIA",
+  "archive": "State_District_Subdistrict_PAN INDIA.rar",
+  "sha256": "b8325e5d9dd0f04a6663d775363fe38cd2f23bd9dbae3fb7118b4e6e0ce0bcb7",
+  "compressedBytes": 202524438,
+  "uncompressedBytes": 381555624,
+  "memberCount": 19,
+  "members": [
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/District Boundary.cpg",
+      "bytes": 5
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/District Boundary.dbf",
+      "bytes": 282282
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/District Boundary.prj",
+      "bytes": 454
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/District Boundary.qmd",
+      "bytes": 666
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/District Boundary.shp",
+      "bytes": 136610876
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/District Boundary.shx",
+      "bytes": 6564
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/Sub_district Boundary.cpg",
+      "bytes": 5
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/Sub_district Boundary.dbf",
+      "bytes": 3327219
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/Sub_district Boundary.prj",
+      "bytes": 454
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/Sub_district Boundary.qmd",
+      "bytes": 666
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/Sub_district Boundary.shp",
+      "bytes": 213766664
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/District_Subdistrict_PAN INDIA/Sub_district Boundary.shx",
+      "bytes": 53436
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.cpg",
+      "bytes": 5
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.dbf",
+      "bytes": 6586
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.prj",
+      "bytes": 454
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.qmd",
+      "bytes": 678
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.shp",
+      "bytes": 27497672
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.shp.xml",
+      "bytes": 518
+    },
+    {
+      "path": "State_District_Subdistrict_PAN INDIA/State Boundary/State Boundary.shx",
+      "bytes": 420
+    }
+  ],
+  "scope": "Administrative/geospatial boundaries only; not ownership/title data."
+}

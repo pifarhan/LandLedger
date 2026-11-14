@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-11-14T03:36:40.041Z",
+  "gaps": [
+    {
+      "id": "G1",
+      "gap": "Authority workflow review",
+      "status": "ADDRESSED",
+      "evidence": "Role-gated workflow review and finalisation; not statutory title validation"
+    },
+    {
+      "id": "G2",
+      "gap": "Document integrity",
+      "status": "ADDRESSED",
+      "evidence": "SHA-256 digest persisted with document and ledger event"
+    },
+    {
+      "id": "G3",
+      "gap": "Document text consistency screening",
+      "status": "ADDRESSED_AS_SCREENING",
+      "evidence": "Tesseract/PDF text extraction + deterministic pattern extraction + cross-field consistency; not document authenticity or legal-title verification"
+    },
+    {
+      "id": "G4",
+      "gap": "Pre-ledger validation",
+      "status": "ADDRESSED",
+      "evidence": "Document validation executes before ledger event write"
+    },
+    {
+      "id": "G5",
+      "gap": "Duplicate/conflicting claimant submissions",
+      "status": "ADDRESSED",
+      "evidence": "State/District-scoped duplicate claimant checks, repeated document hashes and multiple-active-claimant screening"
+    },
+    {
+      "id": "G6",
+      "gap": "Explainable fraud screening",
+      "status": "ADDRESSED",
+      "evidence": "Rule + logistic ensemble with feature explanations"
+    },
+    {
+      "id": "G7",
+      "gap": "Auditability",
+      "status": "ADDRESSED",
+      "evidence": "Ledger service and property/transfer event history"
+    },
+    {
+      "id": "G8",
+      "gap": "Permissioned blockchain",
+      "status": "IMPLEMENTATION_PATH_SUPPLIED",
+      "evidence": "Fabric Gateway + chaincode adapter; live Fabric not deployed/tested here"
+    },
+    {
+      "id": "G9",
+      "gap": "Performance evidence",
+      "status": "BENCHMARK_HARNESS_ONLY",
+      "evidence": "Benchmark harness supplied; no live Fabric TPS/latency result was measured"
+    },
+    {
+      "id": "G10",
+      "gap": "Security controls",
+      "status": "STATIC_CONTROLS_VERIFIED",
+      "evidence": "Automated control audit; not penetration testing"
+    },
+    {
+      "id": "G11",
+      "gap": "Real public data provenance",
+      "status": "ADDRESSED",
+      "evidence": "Official DILRMP public snapshot + provenance files"
+    },
+    {
+      "id": "G12",
+      "gap": "Research reproducibility",
+      "status": "ADDRESSED",
+      "evidence": "Evaluation scripts and machine-readable result artifacts"
+    }
+  ]
+}

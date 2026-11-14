@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-11-14T10:36:13.971364+00:00",
+  "realGovernmentMLReady": false,
+  "status": "BLOCKED_NO_QUALIFYING_AUTHORISED_DATASET",
+  "reason": "No authorised dataset is supplied. Place records.csv and manifest.json in research/private-data/.",
+  "requiredInputFiles": [
+    "research/private-data/records.csv",
+    "research/private-data/manifest.json"
+  ],
+  "trainingPolicy": "Only final court findings or competent-authority confirmed fraud labels with written research authorisation, de-identification, independent labelers and adjudicator review are accepted. Allegations and synthetic cases are not labels."
+}

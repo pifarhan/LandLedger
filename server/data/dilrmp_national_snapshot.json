@@ -1,0 +1,39 @@
+{
+  "authority": "Department of Land Resources, Government of India",
+  "dataset": "DILRMP Computerization of Land Records (CLR) State/UT-wise national total",
+  "source": "https://dilrmp.gov.in/physicalProgressReports/clr/state-level",
+  "retrievedAt": "2026-11-14",
+  "scope": "Aggregate public administrative indicators only; not individual ownership/title records.",
+  "metrics": {
+    "statesUt": 36,
+    "districts": 783,
+    "tehsils": 6974,
+    "villages": 650819,
+    "rorTotal": 403404057,
+    "rorComputerized": 402113713,
+    "rorComputerizedPercent": 99.68,
+    "rorLinkedToCadastralMap": 22691503,
+    "rorLinkedToCadastralMapPercent": 5.63,
+    "villagesClrCompleted": 632516,
+    "villagesClrCompletedPercent": 97.19,
+    "totalLandOwners": 510604000,
+    "genderBasedOwnership": {
+      "districts": 176,
+      "male": 109753914,
+      "female": 39588959,
+      "total": 149342873
+    },
+    "onlineRoRStates": 31,
+    "digitallySignedRoRStates": 24,
+    "digitallySignedRoRLegallyValidStates": 24,
+    "onlineMutationApplicationStates": 26,
+    "autoTriggeredMutationStates": 27,
+    "autoMutationStates": 4,
+    "banksAuthorizedStates": 13,
+    "bankAuthorizedDistricts": 388,
+    "bankAuthorizedBranches": 65693,
+    "sroOnlineCheckStates": 24,
+    "revenueCourtOnlineCheckStates": 17,
+    "civilCourtEcourtCheckStates": 9
+  }
+}

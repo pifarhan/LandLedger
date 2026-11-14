@@ -1,0 +1,44 @@
+{
+  "dataset": "land-record-dispute-case-law-reference-corpus",
+  "scope": "Small official case-law design reference set; not a fraud-labelled dataset, not a statistical sample and not suitable for model training.",
+  "cases": [
+    {
+      "caseName": "P. Kumarakurubaran v. M. Chinnakannan and Another",
+      "citation": "2025 INSC 598",
+      "court": "Supreme Court of India",
+      "judgmentDate": "2025-04-29",
+      "officialJudgmentUrl": "https://api.sci.gov.in/supremecourt/2021/3247/3247_2021_13_1501_61288_Judgement_29-Apr-2025.pdf",
+      "relevantIssue": [
+        "power-of-attorney scope",
+        "disputed authority to alienate property",
+        "registered sale deed",
+        "limitation and date-of-knowledge dispute"
+      ],
+      "proceduralDisposition": "The Court held that disputed questions of fact could not be summarily resolved without trial; the appeal against rejection of the plaint was allowed.",
+      "labelStatus": "CONTESTED_ALLEGATION_NOT_FINAL_FRAUD_FINDING",
+      "trainingUse": "PROHIBITED_AS_FRAUD_LABEL",
+      "whyIncluded": "Shows why document possession or a registered deed alone should not be converted into an automated fraud finding; authority scope and disputed factual evidence require adjudication.",
+      "sourceReview": "Official Supreme Court judgment, page 20 of the PDF; the appellant's assertions are described as assertions, not as finally proved fraud."
+    },
+    {
+      "caseName": "Sahil Abdulsattar Mansuri and Others v. Safimahamad Fafirbhai Mansuri and Others",
+      "citation": "2026 INSC 626",
+      "court": "Supreme Court of India",
+      "judgmentDate": "2026-06-04",
+      "officialJudgmentUrl": "https://api.sci.gov.in/supremecourt/2025/50799/50799_2025_5_1502_71709_Judgement_04-Jun-2026.pdf",
+      "relevantIssue": [
+        "alleged forged partition deed",
+        "alleged forged sale deed",
+        "revenue-record mutation based on disputed instruments",
+        "FSL report mentioned in investigation",
+        "delay in criminal investigation"
+      ],
+      "proceduralDisposition": "The Supreme Court directed the State of Gujarat and Bhiloda Police Station to conclude the investigation and file an appropriate report. The order discusses the complaint and FSL report but does not adjudicate the accused persons' guilt or make a final fraud finding.",
+      "labelStatus": "INVESTIGATION_DIRECTION_NO_FINAL_FRAUD_FINDING",
+      "trainingUse": "PROHIBITED_AS_FRAUD_LABEL",
+      "whyIncluded": "Shows the risk of false labelling: allegations and an FSL report described during an unfinished investigation are not equivalent to a final judicial finding or authority-confirmed fraud label.",
+      "sourceReview": "Official Supreme Court judgment, paragraphs 4-5 and 14-19. Paragraphs 4-5 summarise allegations and the FSL report; paragraphs 18-19 direct further investigation and list the matter for a later date."
+    }
+  ],
+  "labelPolicy": "Only final judicial findings or competent-authority-confirmed cases with written research permission may be considered for training. Pending disputes, pleadings, allegations, FIRs, FSL opinions in unfinished investigations, bail orders and procedural directions are not ground-truth fraud labels."
+}

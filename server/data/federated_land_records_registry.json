@@ -1,0 +1,1030 @@
+{
+  "dataset": "Federated land-record provider capability registry",
+  "version": "1.0.0",
+  "generatedOn": "2026-11-14",
+  "jurisdictionCount": 36,
+  "sources": [
+    {
+      "publisher": "Reserve Bank Innovation Hub (RBIH)",
+      "title": "Next-generation Land Records Service documentation",
+      "url": "https://docs.rbihub.in/unified-lending-interface/next-gen/land-records",
+      "scope": "12 state government backends; asynchronous parcel query; owner, parcel and encumbrance response fields; requires ULI onboarding/credentials."
+    },
+    {
+      "publisher": "Reserve Bank Innovation Hub (RBIH)",
+      "title": "LRS API integration guide v3",
+      "url": "https://docs.rbihub.in/unified-lending-interface/getting-started/service-integration/lrs",
+      "scope": "14 states; state-wise lender integration guide; consent-id header required for master-data and land-ownership calls."
+    },
+    {
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "DILRMP 3.0 Operational Guidelines (2026-2031)",
+      "url": "https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2026/08/20260825865791200.pdf",
+      "scope": "Federated Land Stack using secure APIs; state departments retain data ownership and custody; access subject to applicable laws, policies and security."
+    },
+    {
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "DILRMP-MIS 4.0 live dashboard",
+      "url": "https://dilrmp.gov.in/",
+      "scope": "State/UT progress on digitisation, georeferencing and ULPIN; progress indicators are not person-level land records."
+    }
+  ],
+  "policy": {
+    "noNationwideOpenOwnerApi": "No public nationwide owner-by-owner API/export was established in this build.",
+    "noBulkScraping": "Do not scrape/duplicate restricted citizen portals, bypass CAPTCHA/OTP/login, or bulk collect personal data.",
+    "consentAndAuthorisation": "RBIH/ULI land records access requires institutional onboarding, credentials, service subscription, IP whitelisting and consent artefact as applicable.",
+    "stateDataCustody": "State/UT departments remain owners and custodians of source land-record datasets under DILRMP 3.0.",
+    "titleBoundary": "A retrieved Record of Rights is source evidence, not a final legal title adjudication. Record date, mutation, encumbrances, court matters and statutory process must be considered.",
+    "noFabricatedRecords": "No owner, parcel, title, acquisition, or ownership relationship is synthesized or fabricated."
+  },
+  "nextGenLrsSupportedCount": 12,
+  "uliLrsV3GuideStateCount": 14,
+  "openBulkApisVerified": 0,
+  "ownerRowsBundled": 0,
+  "records": [
+    {
+      "stateCode": "AN",
+      "stateName": "Andaman & Nicobar Islands",
+      "type": "UT",
+      "lgdCode": 35,
+      "officialPortal": "http://db.and.nic.in/ROR/view1/formf.aspx",
+      "portalName": "Dweep Bhoomi / RoR service",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "AP",
+      "stateName": "Andhra Pradesh",
+      "type": "State",
+      "lgdCode": 28,
+      "officialPortal": "http://meebhoomi.ap.gov.in",
+      "portalName": "MeeBhoomi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Survey Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "AR",
+      "stateName": "Arunachal Pradesh",
+      "type": "State",
+      "lgdCode": 12,
+      "officialPortal": "https://lisa.arunachal.gov.in/",
+      "portalName": "LISA – Land Information System of Arunachal Pradesh",
+      "portalStatus": "supplemental_state_government_portal",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "AS",
+      "stateName": "Assam",
+      "type": "State",
+      "lgdCode": 18,
+      "officialPortal": "http://revenueassam.nic.in",
+      "portalName": "Dharitree / Revenue Assam",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Dag Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "BR",
+      "stateName": "Bihar",
+      "type": "State",
+      "lgdCode": 10,
+      "officialPortal": "http://biharbhumi.bihar.gov.in",
+      "portalName": "Bihar Bhumi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "CH",
+      "stateName": "Chandigarh",
+      "type": "UT",
+      "lgdCode": 4,
+      "officialPortal": "https://revenue.chd.gov.in/",
+      "portalName": "Chandigarh Revenue",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "CG",
+      "stateName": "Chhattisgarh",
+      "type": "State",
+      "lgdCode": 22,
+      "officialPortal": "https://bhuiyan.cg.nic.in/",
+      "portalName": "Bhuiyan",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Khasra Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "GA",
+      "stateName": "Goa",
+      "type": "State",
+      "lgdCode": 30,
+      "officialPortal": "https://dslr.goa.gov.in",
+      "portalName": "Directorate of Settlement & Land Records",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "GJ",
+      "stateName": "Gujarat",
+      "type": "State",
+      "lgdCode": 24,
+      "officialPortal": "http://anyror.gujarat.gov.in",
+      "portalName": "AnyRoR",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Survey Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "HR",
+      "stateName": "Haryana",
+      "type": "State",
+      "lgdCode": 6,
+      "officialPortal": "https://jamabandi.nic.in/DefaultPages/Default",
+      "portalName": "Jamabandi / Revenue Haryana",
+      "portalStatus": "supplemental_state_government_portal",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "HP",
+      "stateName": "Himachal Pradesh",
+      "type": "State",
+      "lgdCode": 2,
+      "officialPortal": "https://himbhoomilmk.nic.in/viewlandrecords.aspx",
+      "portalName": "HimBhoomi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "ULI_V3_GUIDE_ONLY",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "JK",
+      "stateName": "Jammu & Kashmir",
+      "type": "UT",
+      "lgdCode": 1,
+      "officialPortal": "https://landrecords.jk.gov.in/Dashboard/Home",
+      "portalName": "J&K Land Records",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "JH",
+      "stateName": "Jharkhand",
+      "type": "State",
+      "lgdCode": 20,
+      "officialPortal": "https://jharbhoomi.jharkhand.gov.in/",
+      "portalName": "Jharbhoomi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "KA",
+      "stateName": "Karnataka",
+      "type": "State",
+      "lgdCode": 29,
+      "officialPortal": "https://rdservices.karnataka.gov.in/",
+      "portalName": "Bhoomi / RD Services",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Survey Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "KL",
+      "stateName": "Kerala",
+      "type": "State",
+      "lgdCode": 32,
+      "officialPortal": "https://entebhoomi.kerala.gov.in/web/home",
+      "portalName": "Ente Bhoomi / ILIMS",
+      "portalStatus": "supplemental_state_government_portal",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "LA",
+      "stateName": "Ladakh",
+      "type": "UT",
+      "lgdCode": 37,
+      "officialPortal": "https://landrecords.ladakh.gov.in/lalr/",
+      "portalName": "Ladakh Land Records (LaLR)",
+      "portalStatus": "supplemental_ut_government_portal",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "LD",
+      "stateName": "Lakshadweep",
+      "type": "UT",
+      "lgdCode": 31,
+      "officialPortal": "http://land.utl.gov.in",
+      "portalName": "Lakshadweep Land Records",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "MP",
+      "stateName": "Madhya Pradesh",
+      "type": "State",
+      "lgdCode": 23,
+      "officialPortal": "https://mpbhulekh.gov.in/mpbhulekh.do",
+      "portalName": "MP Bhulekh",
+      "portalStatus": "supplemental_state_government_portal",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Survey / Khasra Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "MH",
+      "stateName": "Maharashtra",
+      "type": "State",
+      "lgdCode": 27,
+      "officialPortal": "https://mahabhumi.gov.in/mahabhumilink",
+      "portalName": "Mahabhumi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Survey Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "MN",
+      "stateName": "Manipur",
+      "type": "State",
+      "lgdCode": 14,
+      "officialPortal": "https://louchapathap.nic.in",
+      "portalName": "Loucha Pathap",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "ML",
+      "stateName": "Meghalaya",
+      "type": "State",
+      "lgdCode": 17,
+      "officialPortal": "https://www.megrevenuedm.gov.in/dlrs/dlrs_aboutus.html",
+      "portalName": "Revenue & Disaster Management / Directorate of Land Records and Surveys",
+      "portalStatus": "authority_reference_no_uniform_statewide_ror",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "MZ",
+      "stateName": "Mizoram",
+      "type": "State",
+      "lgdCode": 15,
+      "officialPortal": "https://eram.mizoram.gov.in/",
+      "portalName": "e-Ram / Land Revenue & Settlement Department",
+      "portalStatus": "supplemental_state_government_service_limited_land_record_coverage",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "NL",
+      "stateName": "Nagaland",
+      "type": "State",
+      "lgdCode": 13,
+      "officialPortal": "https://www.lrsror.nagaland.gov.in/home",
+      "portalName": "Land Records (RoR) / Directorate of Land Records and Survey",
+      "portalStatus": "supplemental_state_government_portal_limited_survey_coverage",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "DL",
+      "stateName": "NCT of Delhi",
+      "type": "UT",
+      "lgdCode": 7,
+      "officialPortal": "http://dlrc.delhigovt.nic.in/",
+      "portalName": "Delhi Land Records",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "OD",
+      "stateName": "Odisha",
+      "type": "State",
+      "lgdCode": 21,
+      "officialPortal": "http://bhulekh.ori.nic.in",
+      "portalName": "Bhulekh Odisha",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Khata Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "PY",
+      "stateName": "Puducherry",
+      "type": "UT",
+      "lgdCode": 34,
+      "officialPortal": "http://www.nilamagal.py.gov.in",
+      "portalName": "Nilamagal",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "ULI_V3_GUIDE_ONLY",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "PB",
+      "stateName": "Punjab",
+      "type": "State",
+      "lgdCode": 3,
+      "officialPortal": "http://revenue.punjab.gov.in",
+      "portalName": "Punjab Revenue / Jamabandi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "RJ",
+      "stateName": "Rajasthan",
+      "type": "State",
+      "lgdCode": 8,
+      "officialPortal": "https://apnakhata.rajasthan.gov.in/",
+      "portalName": "Apna Khata / e-Dharti",
+      "portalStatus": "supplemental_state_government_portal",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Khata Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "SK",
+      "stateName": "Sikkim",
+      "type": "State",
+      "lgdCode": 11,
+      "officialPortal": "https://www.sikkimlrdm.gov.in/lrd/LandReg.html",
+      "portalName": "Sikkim Land Registration / Land Records",
+      "portalStatus": "supplemental_state_government_information_portal",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "TN",
+      "stateName": "Tamil Nadu",
+      "type": "State",
+      "lgdCode": 33,
+      "officialPortal": "https://eservices.tn.gov.in",
+      "portalName": "Tamil Nadu e-Services",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Survey Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "TS",
+      "stateName": "Telangana",
+      "type": "State",
+      "lgdCode": 36,
+      "officialPortal": "http://webland.telangana.gov.in/",
+      "portalName": "Webland",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "DN",
+      "stateName": "Dadra & Nagar Haveli and Daman & Diu",
+      "type": "UT",
+      "lgdCode": 38,
+      "officialPortal": "https://swp.dddgov.in/integrate-land-property-portal",
+      "portalName": "Integrated Land / Property Portal (DNH & Daman & Diu)",
+      "portalStatus": "supplemental_ut_government_portal",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "TR",
+      "stateName": "Tripura",
+      "type": "State",
+      "lgdCode": 16,
+      "officialPortal": "http://jami.tripura.gov.in",
+      "portalName": "Jami Tripura",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "Dag Number",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "UK",
+      "stateName": "Uttarakhand",
+      "type": "State",
+      "lgdCode": 5,
+      "officialPortal": "https://bhulekh.uk.gov.in",
+      "portalName": "Bhulekh Uttarakhand",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "UP",
+      "stateName": "Uttar Pradesh",
+      "type": "State",
+      "lgdCode": 9,
+      "officialPortal": "https://upbhulekh.gov.in/",
+      "portalName": "UP Bhulekh – Khatauni / RoR",
+      "portalStatus": "supplemental_state_government_portal_verified",
+      "nextGenLrs": {
+        "documented": true,
+        "supported": true,
+        "primaryIdentifierLabel": "ULPIN (16-digit)",
+        "requiredFields": [
+          "district",
+          "village",
+          "primary_identifier"
+        ],
+        "apiAccess": "ONBOARDING_REQUIRED"
+      },
+      "uliLrsV3Guide": {
+        "documented": true,
+        "supportedInGuide": true,
+        "consentArtifactRequired": true,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "FEDERATED_API_DOCUMENTED",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    },
+    {
+      "stateCode": "WB",
+      "stateName": "West Bengal",
+      "type": "State",
+      "lgdCode": 19,
+      "officialPortal": "http://www.banglarbhumi.gov.in",
+      "portalName": "Banglarbhumi",
+      "portalStatus": "listed",
+      "nextGenLrs": {
+        "documented": false,
+        "supported": false,
+        "primaryIdentifierLabel": null,
+        "requiredFields": [],
+        "apiAccess": "NOT_DOCUMENTED"
+      },
+      "uliLrsV3Guide": {
+        "documented": false,
+        "supportedInGuide": false,
+        "consentArtifactRequired": false,
+        "directConnectorConfigured": false
+      },
+      "bulkOwnerExport": "NOT_AUTHORISED_OR_NOT_VERIFIED",
+      "ownerParcelEvidenceRowsBundled": 0,
+      "coverageStatus": "STATE_PORTAL_LOOKUP_OR_AUTHORITY_CHANNEL",
+      "coverageNote": "No nationwide or bulk owner-name dataset is bundled. A specific parcel query requires the state-specific identifier and lawful, authorised access."
+    }
+  ]
+}

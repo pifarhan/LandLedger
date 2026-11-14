@@ -1,0 +1,14 @@
+{
+  "source_authority": "Name of competent government authority",
+  "source_url": "https://example.gov.in/authorised-dataset-catalogue",
+  "authorization_reference": "Written permission / MoU / ethics approval reference",
+  "approved_purpose": "FRAUD_DETECTION_RESEARCH",
+  "deidentified": true,
+  "pii_removed": true,
+  "label_basis": "FINAL_COURT_FINDING",
+  "labeler_count": 2,
+  "adjudicator_reviewed": true,
+  "dataset_sha256": "REPLACE_WITH_SHA256_OF_records.csv",
+  "data_owner_contact": "Official data steward contact",
+  "collection_period": "YYYY-MM-DD/YYYY-MM-DD"
+}

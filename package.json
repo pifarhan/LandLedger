@@ -1,0 +1,24 @@
+{
+  "name": "land-record-system-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blockchain-based land record and property transaction management prototype",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "research:evaluate": "node research/evaluate.mjs",
+    "verify": "npm test && npm run verify:official-data && npm run research:evaluate",
+    "research:security": "node research/security-audit.mjs",
+    "research:ml-gate": "node research/real-data-ml-gate.mjs",
+    "fabric:preflight": "node research/fabric/live-benchmark-preflight.mjs",
+    "verify:research": "npm run research:evaluate && npm run research:security && npm run research:ml-gate",
+    "verify:official-data": "node research/verify-official-data.mjs",
+    "abdb:build": "python research/abdb/build-abdb-hierarchy.py server/data/abdb/extracted server/data/abdb/abdb-hierarchy.json"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

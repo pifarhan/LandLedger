@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verified Parcel Ownership Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stateCode",
+    "district",
+    "villageOrMouza",
+    "parcelIdentifier",
+    "sourceUrl",
+    "retrievedAt",
+    "accessBasis",
+    "verificationStatus"
+  ],
+  "properties": {
+    "stateCode": {
+      "type": "string",
+      "minLength": 2
+    },
+    "district": {
+      "type": "string"
+    },
+    "tehsilOrBlock": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "villageOrMouza": {
+      "type": "string"
+    },
+    "parcelIdentifier": {
+      "type": "string",
+      "description": "Khasra/Khata/Plot/Dag/Survey number as named by the issuing State portal"
+    },
+    "khatianOrRecordNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ownerNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Only include where legally public and there is a documented lawful basis; minimise/mask personal data."
+    },
+    "area": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "areaUnit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recordDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "sourceRecordId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "retrievedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "accessBasis": {
+      "type": "string",
+      "minLength": 8,
+      "description": "Public open-data licence, statutory public-record access, consent, or written authority; do not bypass OTP/CAPTCHA/access controls."
+    },
+    "verificationStatus": {
+      "enum": [
+        "SOURCE_CAPTURED_UNVERIFIED",
+        "AUTHORITY_VERIFIED_SOURCE_RECORD",
+        "REJECTED",
+        "REQUIRES_REVIEW"
+      ]
+    },
+    "verifiedByAuthorityId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "contentSha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "privacyClassification": {
+      "enum": [
+        "PUBLIC_RECORD_MINIMISED",
+        "RESTRICTED_PERSONAL_DATA"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceVerification": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Authority audit metadata proving a manual match to the source record; not a legal title adjudication."
+    },
+    "ownerParcelMatchStatus": {
+      "type": "string",
+      "enum": [
+        "NO_HOLDER_RELATIONSHIP_CAPTURED",
+        "SOURCE_CAPTURED_UNVERIFIED",
+        "AUTHORITY_CONFIRMED_IN_SOURCE_RECORD"
+      ]
+    },
+    "legalTitleStatus": {
+      "const": "NOT_A_LEGAL_TITLE_ADJUDICATION"
+    },
+    "sourceAuthority": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceDocumentUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "retrievalDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verifiedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  }
+}

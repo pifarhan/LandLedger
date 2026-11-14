@@ -1,0 +1,1822 @@
+{
+  "datasetName": "LandLedger India State/UT Official Data Register",
+  "datasetVersion": "2026.11.14-v2",
+  "generatedOn": "2026-11-14",
+  "jurisdictionCount": 36,
+  "stateCount": 28,
+  "unionTerritoryCount": 8,
+  "classification": {
+    "official": "Government-published jurisdiction directory, DILRMP aggregate CLR progress, dated RoR directory metadata, NIC BhuNaksha listing flags, NGDRS published registration activity and Survey of India ABDB administrative geography.",
+    "unavailable": "Missing metrics or non-reported source fields remain null/not_reported. No owner, parcel, deed, title or mutation row is invented.",
+    "synthetic": "The distributed default ledger is empty. No demo owners or sample properties are seeded."
+  },
+  "sources": [
+    {
+      "id": "dolr_state_master",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "DILRMP MIS 3.0 State List / State Level CLR Report",
+      "url": "https://dilrmp.gov.in/dilrmpold/dashboard/state-list-dashboard",
+      "asOf": "retrieved 2026-11-14",
+      "dataUse": "Official 36 State/UT names, LGD codes, and State/UT classification."
+    },
+    {
+      "id": "dolr_ror",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "Land Records State ROR On Web",
+      "url": "https://dilrmp.gov.in/dilrmpold/physcial/report/pdf/stateror",
+      "asOf": "2026-05-08",
+      "dataUse": "Official dated RoR directory URLs/statuses. The published report contains 35 rows and excludes Ladakh."
+    },
+    {
+      "id": "ngdrs_dashboard",
+      "publisher": "Department of Land Resources, Government of India / NGDRS",
+      "title": "National Dashboard – State-wise document registration statistics retrieved from live State IGR servers",
+      "url": "https://ngdrs.gov.in/NGDRS_Website/data-grid.php?lang=en",
+      "generatedAt": "2026-11-13T16:09:00+05:30",
+      "periodStart": "2017-01-01",
+      "periodEnd": "2026-11-12",
+      "dataUse": "State/UT registration statistics for the 26 rows reported by the dashboard; not land-record ownership statistics."
+    },
+    {
+      "id": "bhunaksha_customization",
+      "publisher": "NIC / Department of Land Resources, Government of India",
+      "title": "BhuNaksha customization list",
+      "url": "https://www.bhunaksha.nic.in/bhunaksha/customization.jsp",
+      "asOf": "retrieved 2026-11-14",
+      "dataUse": "List membership flag only; does not prove public parcel-level API availability."
+    },
+    {
+      "id": "survey_india_abdb",
+      "publisher": "Survey of India, Government of India",
+      "title": "Administrative Boundary Data Base (ABDB)",
+      "url": "https://surveyofindia.gov.in/pages/administrative-boundary-data-base-abdb-",
+      "downloadUrl": "https://surveyofindia.gov.in/documents/State_District_Subdistrict_PAN%20INDIA.rar",
+      "asOf": "retrieved 2026-11-14",
+      "dataUse": "Official administrative boundary source (State/District/Sub-District and Village layers). Geometry and hierarchy are not bundled because the uploaded 193 MB RAR could not be materialized in this runtime."
+    },
+    {
+      "id": "DILRMP_MIS4_MAP",
+      "name": "DILRMP MIS 4.0 Map Digitization State/UT report",
+      "url": "https://www.dilrmp.gov.in/physicalProgressReports/map/state-level",
+      "publisher": "Department of Land Resources, Government of India",
+      "observedAt": "2026-11-14",
+      "role": "Official report schema for State/UT cadastral-map digitisation, map-to-RoR linkage, geo-referencing, land parcels and ULPIN indicators. The local package does not claim to have downloaded all district rows from this current report."
+    },
+    {
+      "id": "DILRMP_MIS3_MAP",
+      "name": "DILRMP MIS 3.0 legacy Map Digitization / ULPIN report",
+      "url": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionStateList",
+      "publisher": "Department of Land Resources, Government of India",
+      "observedAt": "2026-11-14",
+      "role": "Legacy national aggregate snapshot retained separately from MIS 4.0; source report does not expose a clear as-of date in the captured page."
+    },
+    {
+      "id": "LACRRIS_DASH",
+      "name": "LACRRIS public dashboard",
+      "url": "https://larr.dolr.gov.in/faces/common/dashboard.xhtml",
+      "publisher": "Department of Land Resources, Government of India / NIC",
+      "observedAt": "2026-11-14",
+      "role": "National land acquisition, area, project, displaced/affected families, compensation and R&R dashboard aggregates. Values are a public web-index snapshot; the source is state-updated and should be refreshed."
+    },
+    {
+      "id": "LACRRIS_STATE_REPORT",
+      "name": "LACRRIS state/UT acquisition progress report",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg2.xhtml",
+      "publisher": "Department of Land Resources, Government of India / NIC",
+      "observedAt": "2026-11-14",
+      "role": "Public State/UT, project and district report interface. State selection is required; the blank unfiltered page showing no rows is not evidence of zero acquisitions."
+    },
+    {
+      "id": "LACRRIS_DISTRICT_REPORT",
+      "name": "LACRRIS district-wise acquisition progress report",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg3.xhtml",
+      "publisher": "Department of Land Resources, Government of India / NIC",
+      "observedAt": "2026-11-14",
+      "role": "Public report schema includes project, act, land-requiring body, district, land extent, SIA/notification/award/payment/possession timelines and compensation/R&R totals."
+    },
+    {
+      "id": "MEGHALAYA_LAND_CONTEXT",
+      "name": "Meghalaya Revenue & Disaster Management Department overview",
+      "url": "https://www.meghalaya.gov.in/dept/39",
+      "publisher": "Government of Meghalaya",
+      "observedAt": "2026-11-14",
+      "role": "Official explanation of the State/Autonomous District Council land administration structure and the lack of uniform State-wide RoR."
+    },
+    {
+      "id": "DOLR_ROR_PORTAL_DIRECTORY",
+      "name": "DILRMP State/UT RoR on Web directory (baseline) + later official portal supplements",
+      "url": "https://dilrmp.gov.in/dilrmpold/State-RoR-Web",
+      "publisher": "Department of Land Resources, Government of India and the respective state/UT governments",
+      "observedAt": "2026-11-14",
+      "role": "36-jurisdiction access directory is supplemented with later state government portals; URLs are access pointers, not bulk data feeds."
+    },
+    {
+      "id": "MIZORAM_ERAM",
+      "name": "Mizoram e-Ram / land revenue service",
+      "url": "https://eram.mizoram.gov.in/",
+      "publisher": "Land Revenue & Settlement Department, Government of Mizoram",
+      "observedAt": "2026-11-14",
+      "role": "Official land application service; limited statewide record coverage as stated by the department."
+    },
+    {
+      "id": "NAGALAND_LRS_ROR",
+      "name": "Nagaland Land Records (ROR) portal",
+      "url": "https://www.lrsror.nagaland.gov.in/home",
+      "publisher": "Directorate of Land Records and Survey, Government of Nagaland",
+      "observedAt": "2026-11-14",
+      "role": "Official portal for ROR/digital map and limited surveyed areas; not a complete State-wide title register."
+    },
+    {
+      "id": "NASHIK_LA_AWARDS",
+      "name": "Nashik District land acquisition awards catalogue",
+      "url": "https://nashik.gov.in/en/document-category/land-acquisition-awards/",
+      "publisher": "District Administration, Nashik, Government of Maharashtra",
+      "observedAt": "2026-11-14",
+      "role": "Official award index with multiple final awards dated 2026; linked PDFs hold details."
+    },
+    {
+      "id": "KERALA_REVENUE_GOS",
+      "name": "Kerala Revenue Department Government Orders index",
+      "url": "https://eoffice.kerala.gov.in/EofficePortal/getGOCurrentDetails?dept_id=26",
+      "publisher": "Revenue Department, Government of Kerala",
+      "observedAt": "2026-11-14",
+      "role": "Official Revenue Department GO index with land-acquisition and award-extension orders; selected project-area values appear in titles."
+    },
+    {
+      "id": "TN_EXTRA_GAZETTE",
+      "name": "Tamil Nadu Extraordinary Gazette 2026",
+      "url": "https://stationeryprinting.tn.gov.in/extra_ordinary_lists.php?id=MjAyNg%3D%3D",
+      "publisher": "Stationery and Printing Department, Government of Tamil Nadu",
+      "observedAt": "2026-11-14",
+      "role": "Official Gazette index with 2026 land-acquisition notices under Highways and Industrial Purposes Acts."
+    },
+    {
+      "id": "RIICO_JPMIA",
+      "name": "RIICO JPMIA land-acquisition office order",
+      "url": "https://riico.rajasthan.gov.in/writereaddata/Orders/202603131026286472492img20260313_10240100.pdf",
+      "publisher": "Rajasthan State Industrial Development and Investment Corporation, Government of Rajasthan",
+      "observedAt": "2026-11-14",
+      "role": "Official project-level order stating 1,086.4494 hectares acquired for JPMIA; parcel/owner schedule not bundled."
+    },
+    {
+      "id": "GMADA_LA_NOTICES",
+      "name": "GMADA land acquisition public notices",
+      "url": "https://gmada.gov.in/en/public-notice-regarding-award-no-584",
+      "publisher": "Greater Mohali Area Development Authority, Government of Punjab",
+      "observedAt": "2026-11-14",
+      "role": "Official public notice catalogue with village-related land acquisition PDFs; details require document extraction."
+    }
+  ],
+  "abdbImport": {
+    "status": "extracted_indexed_with_quality_flags",
+    "source": "Survey of India ABDB",
+    "includedInZip": true,
+    "archiveSha256": "b8325e5d9dd0f04a6663d775363fe38cd2f23bd9dbae3fb7118b4e6e0ce0bcb7",
+    "archiveBytes": 202524438,
+    "derivedHierarchy": "server/data/abdb/abdb-hierarchy.json",
+    "districtCsv": "server/data/abdb/districts.csv",
+    "subDistrictCsv": "server/data/abdb/subdistricts.csv",
+    "qualityFlags": "See server/data/abdb/abdb-hierarchy.json coverage: disputed boundaries, missing attributes and state sub-district gaps are recorded."
+  },
+  "registrationActivityNote": "NGDRS registration-activity metrics are copied from the official NGDRS national dashboard snapshot retrieved 13-Nov-2026, for the period 01-Jan-2017 through 12-Nov-2026. These are aggregate document-registration statistics, not parcel title or ownership records. Unreported rows remain null; zeros are preserved as reported.",
+  "states": [
+    {
+      "code": "AN",
+      "name": "Andaman & Nicobar Islands",
+      "type": "UT",
+      "lgdCode": 35,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Dweep Bhoomi / RoR service",
+        "url": "http://db.and.nic.in/ROR/view1/formf.aspx",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2018-06-29",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-11",
+        "sroOffices": 5,
+        "documentsSubmitted": 9658,
+        "appointments": 9492,
+        "documentsRegistered": 5246,
+        "revenueCollectionLakh": 20676.76
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://db.and.nic.in/ROR/view1/formf.aspx",
+        "portalName": "Dweep Bhoomi / RoR service",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "AP",
+      "name": "Andhra Pradesh",
+      "type": "State",
+      "lgdCode": 28,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "MeeBhoomi",
+        "url": "http://meebhoomi.ap.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "CARD",
+        "lastSyncDate": "2024-07-14",
+        "sroOffices": 296,
+        "documentsSubmitted": 16876674,
+        "appointments": 0,
+        "documentsRegistered": 16240103,
+        "revenueCollectionLakh": 5182025.24
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://meebhoomi.ap.gov.in",
+        "portalName": "MeeBhoomi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "AR",
+      "name": "Arunachal Pradesh",
+      "type": "State",
+      "lgdCode": 12,
+      "rorDirectory": {
+        "portalName": "LISA – Land Information System of Arunachal Pradesh",
+        "url": "https://lisa.arunachal.gov.in/",
+        "authority": "Department of Land Management, Government of Arunachal Pradesh",
+        "status": "supplemental_state_government_portal",
+        "supportingLink": null,
+        "sourceUrl": "https://lisa.arunachal.gov.in/",
+        "sourceAsOf": "2025-02-03 launch notice / crawled 2026-11-14",
+        "note": "Citizen portal for land allotments, land-holding certificates and revenue payments. This supplements the 08-May-2026 DoLR RoR directory, which then said Not Available; not evidence of a bulk owner API.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2025-02-04",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 2,
+        "documentsSubmitted": 38,
+        "appointments": 371,
+        "documentsRegistered": 334,
+        "revenueCollectionLakh": 5047.05
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://lisa.arunachal.gov.in/",
+        "portalName": "LISA – Land Information System of Arunachal Pradesh",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "AS",
+      "name": "Assam",
+      "type": "State",
+      "lgdCode": 18,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Dharitree / Revenue Assam",
+        "url": "http://revenueassam.nic.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2022-11-14",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 77,
+        "documentsSubmitted": 467950,
+        "appointments": 493859,
+        "documentsRegistered": 449281,
+        "revenueCollectionLakh": 152867.98
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://revenueassam.nic.in",
+        "portalName": "Dharitree / Revenue Assam",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "BR",
+      "name": "Bihar",
+      "type": "State",
+      "lgdCode": 10,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Bihar Bhumi",
+        "url": "http://biharbhumi.bihar.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://biharbhumi.bihar.gov.in",
+        "portalName": "Bihar Bhumi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "CH",
+      "name": "Chandigarh",
+      "type": "UT",
+      "lgdCode": 4,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Chandigarh Revenue",
+        "url": "https://revenue.chd.gov.in/",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2025-01-16",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-01-22",
+        "sroOffices": 1,
+        "documentsSubmitted": 1158,
+        "appointments": 13262,
+        "documentsRegistered": 10458,
+        "revenueCollectionLakh": 37224.92
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://revenue.chd.gov.in/",
+        "portalName": "Chandigarh Revenue",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "CG",
+      "name": "Chhattisgarh",
+      "type": "State",
+      "lgdCode": 22,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Bhuiyan",
+        "url": "https://bhuiyan.cg.nic.in/",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-12-22",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 122,
+        "documentsSubmitted": 7374,
+        "appointments": 1053631,
+        "documentsRegistered": 936865,
+        "revenueCollectionLakh": 1016824.9
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://bhuiyan.cg.nic.in/",
+        "portalName": "Bhuiyan",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "GA",
+      "name": "Goa",
+      "type": "State",
+      "lgdCode": 30,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Directorate of Settlement & Land Records",
+        "url": "https://dslr.goa.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2019-02-04",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 12,
+        "documentsSubmitted": 182106,
+        "appointments": 181843,
+        "documentsRegistered": 179221,
+        "revenueCollectionLakh": 658460.62
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://dslr.goa.gov.in",
+        "portalName": "Directorate of Settlement & Land Records",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "GJ",
+      "name": "Gujarat",
+      "type": "State",
+      "lgdCode": 24,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "AnyRoR",
+        "url": "http://anyror.gujarat.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "GARVI",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 287,
+        "documentsSubmitted": 7212690,
+        "appointments": 8172684,
+        "documentsRegistered": 7289572,
+        "revenueCollectionLakh": 6325658.3
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://anyror.gujarat.gov.in",
+        "portalName": "AnyRoR",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "HR",
+      "name": "Haryana",
+      "type": "State",
+      "lgdCode": 6,
+      "rorDirectory": {
+        "portalName": "Jamabandi / Revenue Haryana",
+        "url": "https://jamabandi.nic.in/DefaultPages/Default",
+        "authority": "Revenue and Disaster Management Department, Government of Haryana",
+        "status": "supplemental_state_government_portal",
+        "supportingLink": {
+          "label": "Haryana district administration portal description",
+          "url": "https://ambala.gov.in/service/jamabandi-portal/",
+          "source": "Government of Haryana district administration"
+        },
+        "sourceUrl": "https://ambala.gov.in/service/jamabandi-portal/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official Jamabandi portal described by Haryana district administration as allowing searches using owner name, khewat and khasra; not an unrestricted bulk data/API grant.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "Web-HALRIS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 143,
+        "documentsSubmitted": 4745357,
+        "appointments": 5013865,
+        "documentsRegistered": 3851727,
+        "revenueCollectionLakh": 3323830.4
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://jamabandi.nic.in/DefaultPages/Default",
+        "portalName": "Jamabandi / Revenue Haryana",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "HP",
+      "name": "Himachal Pradesh",
+      "type": "State",
+      "lgdCode": 2,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "HimBhoomi",
+        "url": "https://himbhoomilmk.nic.in/viewlandrecords.aspx",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2019-09-12",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 192,
+        "documentsSubmitted": 898171,
+        "appointments": 895404,
+        "documentsRegistered": 887374,
+        "revenueCollectionLakh": 246164.45
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://himbhoomilmk.nic.in/viewlandrecords.aspx",
+        "portalName": "HimBhoomi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "JK",
+      "name": "Jammu & Kashmir",
+      "type": "UT",
+      "lgdCode": 1,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "J&K Land Records",
+        "url": "https://landrecords.jk.gov.in/Dashboard/Home",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-06-15",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 87,
+        "documentsSubmitted": 483190,
+        "appointments": 493348,
+        "documentsRegistered": 468247,
+        "revenueCollectionLakh": 337580.05
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://landrecords.jk.gov.in/Dashboard/Home",
+        "portalName": "J&K Land Records",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "JH",
+      "name": "Jharkhand",
+      "type": "State",
+      "lgdCode": 20,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Jharbhoomi",
+        "url": "https://jharbhoomi.jharkhand.gov.in/",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2018-10-24",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-08-16",
+        "sroOffices": 42,
+        "documentsSubmitted": 1067884,
+        "appointments": 1057762,
+        "documentsRegistered": 1051899,
+        "revenueCollectionLakh": 745319.27
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://jharbhoomi.jharkhand.gov.in/",
+        "portalName": "Jharbhoomi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "KA",
+      "name": "Karnataka",
+      "type": "State",
+      "lgdCode": 29,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Bhoomi / RD Services",
+        "url": "https://rdservices.karnataka.gov.in/",
+        "supportingLink": {
+          "label": "Karnataka Land Records service dashboard",
+          "url": "https://landrecords.karnataka.gov.in/service2/",
+          "source": "DoLR RoR-on-Web table column LR"
+        },
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://rdservices.karnataka.gov.in/",
+        "portalName": "Bhoomi / RD Services",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "KL",
+      "name": "Kerala",
+      "type": "State",
+      "lgdCode": 32,
+      "rorDirectory": {
+        "portalName": "Ente Bhoomi / ILIMS",
+        "url": "https://entebhoomi.kerala.gov.in/web/home",
+        "authority": "Government of Kerala – Survey, Revenue and Registration integration",
+        "status": "supplemental_state_government_portal",
+        "supportingLink": {
+          "label": "Directorate of Survey and Land Records – Ente Bhoomi",
+          "url": "https://dslr.kerala.gov.in/en/erekha/",
+          "source": "Government of Kerala"
+        },
+        "sourceUrl": "https://dslr.kerala.gov.in/en/erekha/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Citizen portal for Kerala ILIMS integrating Survey, Revenue and Registration services. The older DoLR directory snapshot did not list this later portal.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://entebhoomi.kerala.gov.in/web/home",
+        "portalName": "Ente Bhoomi / ILIMS",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "LA",
+      "name": "Ladakh",
+      "type": "UT",
+      "lgdCode": 37,
+      "rorDirectory": {
+        "portalName": "Ladakh Land Records (LaLR)",
+        "url": "https://landrecords.ladakh.gov.in/lalr/",
+        "authority": "Revenue Department, Union Territory of Ladakh",
+        "status": "supplemental_ut_government_portal",
+        "supportingLink": null,
+        "sourceUrl": "https://landrecords.ladakh.gov.in/lalr/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official UT portal describes GIS-based services including RoR, Jamabandi, Girdawari and Mutation; its update says textual Jamabandi data entry was hosted from 01-Apr-2024.",
+        "previousDoLRDirectoryStatus": "not_in_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2021-11-16",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-02-24",
+        "sroOffices": 14,
+        "documentsSubmitted": 4151,
+        "appointments": 4113,
+        "documentsRegistered": 3796,
+        "revenueCollectionLakh": 1482.53
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://landrecords.ladakh.gov.in/lalr/",
+        "portalName": "Ladakh Land Records (LaLR)",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "LD",
+      "name": "Lakshadweep",
+      "type": "UT",
+      "lgdCode": 31,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Lakshadweep Land Records",
+        "url": "http://land.utl.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://land.utl.gov.in",
+        "portalName": "Lakshadweep Land Records",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "MP",
+      "name": "Madhya Pradesh",
+      "type": "State",
+      "lgdCode": 23,
+      "rorDirectory": {
+        "portalName": "MP Bhulekh",
+        "url": "https://mpbhulekh.gov.in/mpbhulekh.do",
+        "authority": "Government of Madhya Pradesh – Revenue Department",
+        "status": "supplemental_state_government_portal",
+        "supportingLink": {
+          "label": "District Administration description of MP Bhulekh",
+          "url": "https://sidhi.nic.in/en/service/land-records/",
+          "source": "Government of Madhya Pradesh district administration"
+        },
+        "sourceUrl": "https://sidhi.nic.in/en/service/land-records/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "District administration identifies MP Bhulekh as the authorised state portal for textual and map land records and certified copies; this does not grant mass extraction/API access.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://mpbhulekh.gov.in/mpbhulekh.do",
+        "portalName": "MP Bhulekh",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "MH",
+      "name": "Maharashtra",
+      "type": "State",
+      "lgdCode": 27,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Mahabhumi",
+        "url": "https://mahabhumi.gov.in/mahabhumilink",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-02-10",
+        "system": "iSarita 1.9 / iSarita 2.0 (NGDRS)",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 498,
+        "documentsSubmitted": 407330,
+        "appointments": 1539,
+        "documentsRegistered": 403156,
+        "revenueCollectionLakh": 261977.01
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://mahabhumi.gov.in/mahabhumilink",
+        "portalName": "Mahabhumi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "MN",
+      "name": "Manipur",
+      "type": "State",
+      "lgdCode": 14,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Loucha Pathap",
+        "url": "https://louchapathap.nic.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2018-07-13",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-06-10",
+        "sroOffices": 16,
+        "documentsSubmitted": 25532,
+        "appointments": 25556,
+        "documentsRegistered": 21817,
+        "revenueCollectionLakh": 2046.53
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://louchapathap.nic.in",
+        "portalName": "Loucha Pathap",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "ML",
+      "name": "Meghalaya",
+      "type": "State",
+      "lgdCode": 17,
+      "rorDirectory": {
+        "portalName": "Revenue & Disaster Management / Directorate of Land Records and Surveys",
+        "url": "https://www.megrevenuedm.gov.in/dlrs/dlrs_aboutus.html",
+        "authority": "Government of Meghalaya",
+        "status": "authority_reference_no_uniform_statewide_ror",
+        "supportingLink": {
+          "label": "Government of Meghalaya Revenue Department overview",
+          "url": "https://www.meghalaya.gov.in/dept/39",
+          "source": "Government of Meghalaya"
+        },
+        "sourceUrl": "https://www.meghalaya.gov.in/dept/39",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Government of Meghalaya describes land administration under the Revenue Department and Autonomous District Councils, and states that no uniform State-wide Records of Rights exist. Local customary and council records must be checked with the competent local authority; this entry is not a State-wide searchable RoR portal.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://www.megrevenuedm.gov.in/dlrs/dlrs_aboutus.html",
+        "portalName": "Revenue & Disaster Management / Directorate of Land Records and Surveys",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "MZ",
+      "name": "Mizoram",
+      "type": "State",
+      "lgdCode": 15,
+      "rorDirectory": {
+        "portalName": "e-Ram / Land Revenue & Settlement Department",
+        "url": "https://eram.mizoram.gov.in/",
+        "authority": "Land Revenue & Settlement Department, Government of Mizoram",
+        "status": "supplemental_state_government_service_limited_land_record_coverage",
+        "sourceUrl": "https://dict.mizoram.gov.in/page/land-records",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official department portal provides applications for land allotment, periodic patta, land settlement certificates, ownership transfer and partition. The department describes Mizoram as a non-land-record State with digitisation/modernisation work; an application portal is not a complete statewide RoR or bulk title feed.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2019-09-06",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-10-18",
+        "sroOffices": 7,
+        "documentsSubmitted": 58552,
+        "appointments": 58374,
+        "documentsRegistered": 51605,
+        "revenueCollectionLakh": 6347.13
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://eram.mizoram.gov.in/",
+        "portalName": "e-Ram / Land Revenue & Settlement Department",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "NL",
+      "name": "Nagaland",
+      "type": "State",
+      "lgdCode": 13,
+      "rorDirectory": {
+        "portalName": "Land Records (RoR) / Directorate of Land Records and Survey",
+        "url": "https://www.lrsror.nagaland.gov.in/home",
+        "authority": "Directorate of Land Records and Survey, Government of Nagaland",
+        "status": "supplemental_state_government_portal_limited_survey_coverage",
+        "sourceUrl": "https://dlrs.nagaland.gov.in/about-us/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official ROR/digital map portal offers land-record search, digital maps and cadastral details. The Directorate states records exist mainly in Dimapur Mouza, towns, administrative headquarters, Government lands and surveyed pockets; Nagaland land administration also follows tribal customary systems. This is not evidence of a complete state-wide title register.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://www.lrsror.nagaland.gov.in/home",
+        "portalName": "Land Records (RoR) / Directorate of Land Records and Survey",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "DL",
+      "name": "NCT of Delhi",
+      "type": "UT",
+      "lgdCode": 7,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Delhi Land Records",
+        "url": "http://dlrc.delhigovt.nic.in/",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2023-08-28",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 39,
+        "documentsSubmitted": 1097133,
+        "appointments": 1110020,
+        "documentsRegistered": 1053413,
+        "revenueCollectionLakh": 2198645.87
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://dlrc.delhigovt.nic.in/",
+        "portalName": "Delhi Land Records",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "OD",
+      "name": "Odisha",
+      "type": "State",
+      "lgdCode": 21,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Bhulekh Odisha",
+        "url": "http://bhulekh.ori.nic.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "e-Registration Odisha",
+        "lastSyncDate": "2024-06-30",
+        "sroOffices": 191,
+        "documentsSubmitted": 1066677,
+        "appointments": 1066677,
+        "documentsRegistered": 1002189,
+        "revenueCollectionLakh": 427087.02
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://bhulekh.ori.nic.in",
+        "portalName": "Bhulekh Odisha",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "PY",
+      "name": "Puducherry",
+      "type": "UT",
+      "lgdCode": 34,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Nilamagal",
+        "url": "http://www.nilamagal.py.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "ePathiram",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 10,
+        "documentsSubmitted": 348451,
+        "appointments": 302403,
+        "documentsRegistered": 335775,
+        "revenueCollectionLakh": 171347.62
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://www.nilamagal.py.gov.in",
+        "portalName": "Nilamagal",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "PB",
+      "name": "Punjab",
+      "type": "State",
+      "lgdCode": 3,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Punjab Revenue / Jamabandi",
+        "url": "http://revenue.punjab.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2017-06-26",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 188,
+        "documentsSubmitted": 6448911,
+        "appointments": 6270676,
+        "documentsRegistered": 5833883,
+        "revenueCollectionLakh": 494795.63
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://revenue.punjab.gov.in",
+        "portalName": "Punjab Revenue / Jamabandi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "RJ",
+      "name": "Rajasthan",
+      "type": "State",
+      "lgdCode": 8,
+      "rorDirectory": {
+        "portalName": "Apna Khata / e-Dharti",
+        "url": "https://apnakhata.rajasthan.gov.in/",
+        "authority": "Revenue Board, Government of Rajasthan",
+        "status": "supplemental_state_government_portal",
+        "supportingLink": null,
+        "sourceUrl": "https://apnakhata.rajasthan.gov.in/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official Rajasthan portal provides district, tehsil, village and Jamabandi copy services. Its notice says web information is for general information and is not a certified/authorised copy.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "Epanjiyan",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 669,
+        "documentsSubmitted": 9841895,
+        "appointments": 0,
+        "documentsRegistered": 6982214,
+        "revenueCollectionLakh": 3664482.41
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://apnakhata.rajasthan.gov.in/",
+        "portalName": "Apna Khata / e-Dharti",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "SK",
+      "name": "Sikkim",
+      "type": "State",
+      "lgdCode": 11,
+      "rorDirectory": {
+        "portalName": "Sikkim Land Registration / Land Records",
+        "url": "https://www.sikkimlrdm.gov.in/lrd/LandReg.html",
+        "authority": "Government of Sikkim – Land Revenue and Disaster Management Department",
+        "status": "supplemental_state_government_information_portal",
+        "supportingLink": null,
+        "sourceUrl": "https://www.sikkimlrdm.gov.in/lrd/LandReg.html",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official department page states land records are computerised and the system supports mutation and RoR issue; it reports implementation in 8 of 9 subdivisions. Treat this as a department service reference, not a verified open data API.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://www.sikkimlrdm.gov.in/lrd/LandReg.html",
+        "portalName": "Sikkim Land Registration / Land Records",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "TN",
+      "name": "Tamil Nadu",
+      "type": "State",
+      "lgdCode": 33,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Tamil Nadu e-Services",
+        "url": "https://eservices.tn.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://eservices.tn.gov.in",
+        "portalName": "Tamil Nadu e-Services",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "TS",
+      "name": "Telangana",
+      "type": "State",
+      "lgdCode": 36,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Webland",
+        "url": "http://webland.telangana.gov.in/",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "CARD",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 144,
+        "documentsSubmitted": 11979139,
+        "appointments": 2631951,
+        "documentsRegistered": 11979139,
+        "revenueCollectionLakh": 8381823.7
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://webland.telangana.gov.in/",
+        "portalName": "Webland",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "DN",
+      "name": "Dadra & Nagar Haveli and Daman & Diu",
+      "type": "UT",
+      "lgdCode": 38,
+      "rorDirectory": {
+        "portalName": "Integrated Land / Property Portal (DNH & Daman & Diu)",
+        "url": "https://swp.dddgov.in/integrate-land-property-portal",
+        "authority": "UT Administration of Dadra & Nagar Haveli and Daman & Diu",
+        "status": "supplemental_ut_government_portal",
+        "supportingLink": null,
+        "sourceUrl": "https://swp.dddgov.in/integrate-land-property-portal",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "UT EODB portal lists updated RoR, 20-year land deeds, property-tax and revenue/civil-court information, and cadastral-map integration. Service scope and access rules remain portal-controlled.",
+        "previousDoLRDirectoryStatus": "not_available_in_dolr_snapshot",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2020-01-04",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-11-12",
+        "sroOffices": 1,
+        "documentsSubmitted": 46267,
+        "appointments": 46085,
+        "documentsRegistered": 45772,
+        "revenueCollectionLakh": 32954.69
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://swp.dddgov.in/integrate-land-property-portal",
+        "portalName": "Integrated Land / Property Portal (DNH & Daman & Diu)",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "TR",
+      "name": "Tripura",
+      "type": "State",
+      "lgdCode": 16,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Jami Tripura",
+        "url": "http://jami.tripura.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": "2021-06-11",
+        "system": "NGDRS",
+        "lastSyncDate": "2026-09-02",
+        "sroOffices": 23,
+        "documentsSubmitted": 163823,
+        "appointments": 163738,
+        "documentsRegistered": 159914,
+        "revenueCollectionLakh": 45727.28
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://jami.tripura.gov.in",
+        "portalName": "Jami Tripura",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "UK",
+      "name": "Uttarakhand",
+      "type": "State",
+      "lgdCode": 5,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Bhulekh Uttarakhand",
+        "url": "https://bhulekh.uk.gov.in",
+        "supportingLink": null,
+        "asOf": "2026-05-08",
+        "note": "URL reproduced from the Department of Land Resources DILRMP RoR-on-Web table dated 08-May-2026. It is a directory entry, not proof of API access or parcel-data export."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "CRS",
+        "lastSyncDate": "2024-10-04",
+        "sroOffices": 53,
+        "documentsSubmitted": 1595754,
+        "appointments": 1417906,
+        "documentsRegistered": 1594981,
+        "revenueCollectionLakh": 1089437.41
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://bhulekh.uk.gov.in",
+        "portalName": "Bhulekh Uttarakhand",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "UP",
+      "name": "Uttar Pradesh",
+      "type": "State",
+      "lgdCode": 9,
+      "rorDirectory": {
+        "portalName": "UP Bhulekh – Khatauni / RoR",
+        "url": "https://upbhulekh.gov.in/",
+        "authority": "Board of Revenue, Government of Uttar Pradesh",
+        "status": "supplemental_state_government_portal_verified",
+        "supportingLink": null,
+        "sourceUrl": "https://upbhulekh.gov.in/",
+        "sourceAsOf": "crawled 2026-11-14",
+        "note": "Official portal describes RoR/Khatauni copy, online certified-copy payment and plot/gata sale or litigation status. This is citizen portal access, not unrestricted bulk export.",
+        "previousDoLRDirectoryStatus": "listed",
+        "previousDoLRDirectoryAsOf": "2026-05-08"
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": true,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "not_reported_in_this_snapshot",
+        "launchDate": null,
+        "system": null,
+        "lastSyncDate": null,
+        "sroOffices": null,
+        "documentsSubmitted": null,
+        "appointments": null,
+        "documentsRegistered": null,
+        "revenueCollectionLakh": null
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "https://upbhulekh.gov.in/",
+        "portalName": "UP Bhulekh – Khatauni / RoR",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    },
+    {
+      "code": "WB",
+      "name": "West Bengal",
+      "type": "State",
+      "lgdCode": 19,
+      "rorDirectory": {
+        "status": "listed",
+        "portalName": "Banglarbhumi",
+        "url": "https://banglarbhumi.gov.in/",
+        "supportingLink": {
+          "label": "Banglarbhumi",
+          "url": "http://www.banglarbhumi.gov.in",
+          "source": "DoLR RoR-on-Web table column RoR"
+        },
+        "asOf": "2026-05-08",
+        "note": "Current official West Bengal Land & Land Reforms portal. Public citizen services include RS-LR plot information, mutation status, ROR request and plot information request; this does not grant bulk owner-data access."
+      },
+      "bhuNaksha": {
+        "listedAsCustomizedWithRor": false,
+        "sourceAsOf": "retrieved 2026-11-14",
+        "note": "A listing on the NIC BhuNaksha customization page indicates software customization/integration listing only; it does not establish open API access or expose ownership records."
+      },
+      "registrationActivity": {
+        "reportingStatus": "reported",
+        "launchDate": null,
+        "system": "e-Nathikaran",
+        "lastSyncDate": "2026-07-20",
+        "sroOffices": 0,
+        "documentsSubmitted": 0,
+        "appointments": 0,
+        "documentsRegistered": 0,
+        "revenueCollectionLakh": 0.0
+      },
+      "landParcelOwnershipRecords": {
+        "availability": "not_included",
+        "syntheticRecordsPresent": false,
+        "note": "No real parcel-level owner/title/transaction rows are bundled. A government portal link or aggregate registration statistics are not parcel ownership data."
+      },
+      "recordAccessPolicy": {
+        "portalUrl": "http://www.banglarbhumi.gov.in",
+        "portalName": "Banglarbhumi",
+        "individualLookup": "portal_specific_citizen_or_official_workflow",
+        "bulkApiAccess": "not_verified",
+        "individualOwnerRowsBundled": false,
+        "note": "A portal link does not authorize bulk scraping or guarantee API access. LandLedger stores no owner-by-owner rows from this directory."
+      }
+    }
+  ],
+  "registrationActivityNationalTotals": {
+    "sourceGeneratedAt": "2026-11-13T16:09:00+05:30",
+    "periodStart": "2017-01-01",
+    "periodEnd": "2026-11-12",
+    "reportingRows": 26,
+    "sroOffices": 3119,
+    "documentsSubmitted": 65035865,
+    "appointments": 30484559,
+    "documentsRegistered": 60837981,
+    "revenueCollectionLakh": 34829834.78,
+    "note": "Official dashboard total. Sum of displayed per-State/UT rounded revenue cells is INR 0.01 lakh lower; retain the dashboard's published aggregate total."
+  },
+  "portalCoverage": {
+    "jurisdictions": 36,
+    "portalUrlPresent": 34,
+    "authorityReferenceOnly": 1,
+    "bulkApiAccessVerified": 0,
+    "individualOwnerRowsBundled": 0,
+    "note": "The directory provides a government/state-authority service path for each jurisdiction where identified. A URL is not an open API. Meghalaya is explicitly marked as lacking a uniform statewide RoR; local authority records differ."
+  }
+}

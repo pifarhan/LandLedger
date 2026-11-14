@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-11-14T10:28:16.715Z",
+  "prerequisites": {
+    "docker": false,
+    "git": true,
+    "go": false,
+    "node": true
+  },
+  "ready": false,
+  "reason": "Live Fabric benchmark requires Docker plus the repository Fabric network dependencies. No benchmark numbers are generated when prerequisites are missing.",
+  "benchmarkCommand": "FABRIC_BENCH_COUNT=100 FABRIC_BENCH_CONCURRENCY=10 node research/fabric/benchmark.mjs"
+}

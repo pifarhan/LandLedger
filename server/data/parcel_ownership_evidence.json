@@ -1,0 +1,15 @@
+{
+  "dataset": "parcel_ownership_evidence",
+  "generatedOn": "2026-11-14",
+  "records": [],
+  "scope": "No person-level owner/parcel rows are preloaded. Lawfully obtained State source documents or authorised API responses may be imported by authority/admin with provenance; imported rows remain unverified until the exact source document is uploaded and reviewed. The independent third-party aggregator connector is on-demand only and does not persist responses. A source-record holder match is not legal title adjudication.",
+  "policy": {
+    "ownerNamesAccess": "Authority/admin only; all other roles receive masked metadata.",
+    "defaultRows": 0,
+    "noSyntheticRecords": true,
+    "noThirdPartyBulkImport": true,
+    "thirdPartySingleLookupPersistence": "DISABLED",
+    "verificationRequires": "Actual reviewed source document uploaded so the server computes SHA-256, HTTPS government/NIC source URL, source record reference, and authority identity.",
+    "legalTitle": "NOT_A_LEGAL_TITLE_ADJUDICATION"
+  }
+}

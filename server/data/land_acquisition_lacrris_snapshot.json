@@ -1,0 +1,51 @@
+{
+  "dataset": "LACRRIS national land-acquisition dashboard snapshot",
+  "authority": "Department of Land Resources, Government of India; data entries supplied by State Governments/UT Administrations",
+  "source": "https://larr.dolr.gov.in/faces/common/dashboard.xhtml",
+  "stateWiseReportSource": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg2.xhtml",
+  "districtWiseReportSource": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg3.xhtml",
+  "projectWiseReportSource": "https://larr.dolr.gov.in/faces/public/projectwise.xhtml",
+  "retrievedAt": "2026-11-14",
+  "sourcePublishedAsOf": null,
+  "sourceUpdatedBy": "State Governments/UT Administrations and Department of Land Resources; dashboard does not expose a single national as-of timestamp",
+  "scope": "National aggregate KPIs. State/project/district detailed report is an interactive public query requiring selection on the LACRRIS website; detailed query results are not represented as a packaged nationwide case export.",
+  "nationalTotals": {
+    "projects": 4862,
+    "projectSegments": 7244,
+    "areaAcquiredHectares": 1885809,
+    "projectDisplacedFamilies": 127987,
+    "projectAffectedFamilies": 27401,
+    "compensationINR": 13015754427,
+    "rehabilitationResettlementINR": 2306761502
+  },
+  "coverage": {
+    "jurisdictionsSelectableOnOfficialStateReport": 36,
+    "stateWiseDetailedRowsBundled": 0,
+    "projectWiseDetailedRowsBundled": 0,
+    "districtWiseDetailedRowsBundled": 0,
+    "detailQueryMode": "official_interactive_filters",
+    "notInSnapshotInterpretation": "A state with no bundled row is not classified as having zero acquisition. Query the official report and preserve its returned status."
+  },
+  "fieldsExposedByOfficialStateReport": [
+    "projectName",
+    "underAct",
+    "landRequiringBody",
+    "districtName",
+    "ruralOrUrban",
+    "landExtentHectares",
+    "siaDate",
+    "preliminaryNotificationDate",
+    "publicationDate",
+    "awardDate",
+    "paymentDate",
+    "possessionDate",
+    "numberOfProjectDisplacedFamilies",
+    "numberOfProjectAffectedFamilies",
+    "compensationINR",
+    "rehabilitationResettlementINR"
+  ],
+  "parcelJoinLimit": "The public report schema does not expose a universal cadastral parcel ID/plot/khasra/dag field. Do not infer parcel-level acquired/not-acquired status from project-area totals.",
+  "records": [],
+  "freshnessNote": "The later public web-index snapshot observed on 14-Nov-2026 reports 4,862 projects, 7,244 segments and 1,885,809 hectares. The dashboard does not expose an exact national data-as-of timestamp; treat as an indexed public snapshot and recheck live before legal/operational reliance.",
+  "retrievalMethod": "Official public LACRRIS dashboard result indexed approximately two weeks before 14-Nov-2026; the dashboard landing page does not expose an as-of timestamp."
+}

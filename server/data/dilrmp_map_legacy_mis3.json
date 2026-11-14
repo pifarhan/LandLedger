@@ -1,0 +1,93 @@
+{
+  "dataset": "DILRMP MIS 3.0 – Map Digitization, Geo-Referenced and ULPIN Status (legacy national aggregate)",
+  "authority": "Department of Land Resources, Government of India / NIC",
+  "source": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionStateList",
+  "observedAt": "2026-11-14",
+  "sourceDataAsOf": null,
+  "scope": "Legacy MIS 3.0 national total only. Not the current MIS 4.0 State/UT table, not parcel title data, and not an owner-level dataset. The captured page did not show a reliable exact as-of date.",
+  "publishedGrandTotal": {
+    "districts": 787,
+    "cadastralMapsTotal": 37267265,
+    "cadastralMapsInGoodCondition": 29181072,
+    "cadastralMapsDigitized": 22311675,
+    "cadastralMapsDigitizedPercentOfTotal": 59.87,
+    "villagesTotal": 655354,
+    "spatialDataVerifiedVillages": 494680,
+    "cadastralMapsGeoReferenced": 356232,
+    "cadastralMapsLinkedToRor": 471907,
+    "realTimeRorMapUpdate": 234332,
+    "bhuNakshaUsedForCadastralMaps": 438455,
+    "landParcelsTotal": 287570549,
+    "landParcelsGeoReferenced": 104246021,
+    "ulpinImplemented": 84370218,
+    "svamitvaUlpinImplemented": 6862082,
+    "ulpinPlusSvamitvaTotal": 91232300
+  },
+  "currentMis4Source": "https://www.dilrmp.gov.in/physicalProgressReports/map/state-level",
+  "currentMis4Status": "schema confirmed; 36 State/UT report page is available, but the full State/UT row extract is not bundled in this build. A runtime refresh connector is provided.",
+  "districtSnapshots": [
+    {
+      "state": "West Bengal",
+      "stateCode": "WB",
+      "stateLgdCode": 19,
+      "sourceUrl": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionDistrictList/19",
+      "districtRows": 22,
+      "grandTotal": {
+        "cadastralMapsTotal": 77864,
+        "cadastralMapsGood": 76035,
+        "cadastralMapsDigitized": 72286,
+        "cadastralMapsDigitizedPercent": 92.84,
+        "totalVillages": 42423,
+        "spatialDataVerifiedVillages": 38847,
+        "landParcelsTotal": 33280640,
+        "landParcelsGeoReferenced": 263390,
+        "ulpinImplemented": 249200,
+        "svamitvaUlpinImplemented": 0,
+        "ulpinPlusSvamitvaTotal": 249200
+      },
+      "note": "Legacy MIS 3.0 state/district page was opened and its 22 district rows and grand total were visible; source page did not display a data-as-of date."
+    },
+    {
+      "state": "Andhra Pradesh",
+      "stateCode": "AP",
+      "stateLgdCode": 28,
+      "sourceUrl": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionDistrictList/28",
+      "districtRows": null,
+      "grandTotal": null,
+      "note": "Official page result returned district-level land-parcel and ULPIN records, but a full auditable state grand total was not captured in the response; excluded from sums."
+    },
+    {
+      "state": "Maharashtra",
+      "stateCode": "MH",
+      "stateLgdCode": 27,
+      "sourceUrl": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionDistrictList/27",
+      "districtRows": null,
+      "grandTotal": null,
+      "note": "Official page result returned district-level land-parcel and ULPIN records, but a full auditable state grand total was not captured in the response; excluded from sums."
+    },
+    {
+      "state": "Tamil Nadu",
+      "stateCode": "TN",
+      "stateLgdCode": 33,
+      "sourceUrl": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionDistrictList/33",
+      "districtRows": null,
+      "grandTotal": null,
+      "note": "Official page result exposed district rows; a full state grand total was not captured in the response; excluded from sums."
+    },
+    {
+      "state": "Karnataka",
+      "stateCode": "KA",
+      "stateLgdCode": 29,
+      "sourceUrl": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionDistrictList/29",
+      "districtRows": null,
+      "grandTotal": null,
+      "note": "Official page search result included a grand-total line, but source extraction did not give complete table labels and reconciliation; excluded from national sums."
+    }
+  ],
+  "limitations": [
+    "MIS 3.0 is retained only as a historical/legacy context layer.",
+    "No individual landowner names, parcel identifiers, boundaries or acquired/not-acquired status are represented.",
+    "Do not aggregate the West Bengal-only state row with the national grand total because the state row may already be included.",
+    "Current MIS 4.0 refresh should supersede this legacy snapshot when live fetch is available."
+  ]
+}

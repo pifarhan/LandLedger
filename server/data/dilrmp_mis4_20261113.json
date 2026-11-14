@@ -1,0 +1,44 @@
+{
+  "dataset": "DILRMP-MIS 4.0 / DILRMP 3.0 national progress dashboard snapshot",
+  "publisher": "Department of Land Resources, Government of India",
+  "sourceUrl": "https://dilrmp.gov.in/",
+  "retrievedAt": "2026-11-14",
+  "dashboardAsOf": "2026-11-13",
+  "scope": "National progress indicators. Village-count coverage percentages are not a person-level ownership export and do not imply that every parcel has a verified title record.",
+  "administrativeCoverage": {
+    "statesAndUnionTerritories": 36,
+    "districts": 782,
+    "tehsils": 6973,
+    "villages": 650602
+  },
+  "recordDigitisation": {
+    "rorComputerised": 401959754,
+    "rorComputerisedPercent": 99.8,
+    "cadastralMapsDigitised": 1409460,
+    "cadastralMapsDigitisedPercent": 94.7
+  },
+  "parcelGeospatialProgress": {
+    "villagesGeoreferenced": 507981,
+    "villagesGeoreferencedPercent": 78.1,
+    "villagesWithUlpIn": 493110,
+    "villagesWithUlpInPercent": 75.8,
+    "ulpiNIdentifierFormat": "14-digit alphanumeric Bhu-Aadhaar/ULPIN"
+  },
+  "additionalProgress": {
+    "tehsilModernRecordRoomsCompleted": 3807,
+    "modernRecordRoomsPercent": 81.6,
+    "legacyRevenuePagesScanned": 7727808,
+    "legacyRevenuePagesScannedPercent": 1.1,
+    "villagesWithAllRorAadhaarLinked": 40993,
+    "villagesWithAllRorAadhaarLinkedPercent": 6.3,
+    "revenueCourtsComputerised": 14465,
+    "revenueCourtsComputerisedPercent": 94.2
+  },
+  "notProvidedByThisSnapshot": [
+    "named owner rows",
+    "parcel-specific title documents",
+    "owner-to-parcel relations",
+    "mutation histories per parcel",
+    "encumbrance certificates per parcel"
+  ]
+}

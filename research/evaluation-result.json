@@ -1,0 +1,211 @@
+{
+  "generatedAt": "2026-11-14T10:35:54.548Z",
+  "officialDataset": {
+    "records": 36,
+    "states": [
+      "Andaman & Nicobar Islands",
+      "Andhra Pradesh",
+      "Arunachal Pradesh",
+      "Assam",
+      "Bihar",
+      "Chandigarh",
+      "Chhattisgarh",
+      "Goa",
+      "Gujarat",
+      "Haryana",
+      "Himachal Pradesh",
+      "Jammu & Kashmir",
+      "Jharkhand",
+      "Karnataka",
+      "Kerala",
+      "Ladakh",
+      "Lakshadweep",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Manipur",
+      "Meghalaya",
+      "Mizoram",
+      "Nagaland",
+      "NCT of Delhi",
+      "Odisha",
+      "Puducherry",
+      "Punjab",
+      "Rajasthan",
+      "Sikkim",
+      "Tamil Nadu",
+      "Telangana",
+      "Dadra & Nagar Haveli and Daman & Diu",
+      "Tripura",
+      "Uttarakhand",
+      "Uttar Pradesh",
+      "West Bengal"
+    ],
+    "schemaPass": true,
+    "source": "https://dilrmp.gov.in/physicalProgressReports/clr/state-level",
+    "retrievedAt": "2026-11-14",
+    "nationalTotals": {
+      "statesUt": 36,
+      "districts": 783,
+      "tehsils": 6974,
+      "villages": 650819,
+      "rorTotal": 403404057,
+      "rorComputerized": 402113713,
+      "rorComputerizedPercent": 99.68,
+      "rorLinkedToCadastralMap": 22691503,
+      "rorLinkedToCadastralMapPercent": 5.63,
+      "villagesClrCompleted": 632516,
+      "villagesClrCompletedPercent": 97.19,
+      "totalLandOwners": 510604000,
+      "genderBasedOwnership": {
+        "districts": 176,
+        "male": 109753914,
+        "female": 39588959,
+        "total": 149342873
+      },
+      "onlineRoRStates": 31,
+      "digitallySignedRoRStates": 24,
+      "digitallySignedRoRLegallyValidStates": 24,
+      "onlineMutationApplicationStates": 26,
+      "autoTriggeredMutationStates": 27,
+      "autoMutationStates": 4,
+      "banksAuthorizedStates": 13,
+      "bankAuthorizedDistricts": 388,
+      "bankAuthorizedBranches": 65693,
+      "sroOnlineCheckStates": 24,
+      "revenueCourtOnlineCheckStates": 17,
+      "civilCourtEcourtCheckStates": 9
+    },
+    "reconciliation": {
+      "districts": 783,
+      "tehsils": 6974,
+      "villages": 650819,
+      "rorTotal": 403404057,
+      "rorComputerized": 402113713,
+      "villagesClrCompleted": 632516,
+      "totalLandOwners": 510604000
+    }
+  },
+  "historicalVillageDataset": {
+    "records": 14,
+    "states": [
+      "Karnataka",
+      "West Bengal"
+    ],
+    "note": "Historical source-derived village-level subset for Karnataka and West Bengal only; source status dates July/August 2024."
+  },
+  "administrativeBoundaryDataset": {
+    "officialStateUtCount": 36,
+    "assignedDistrictFeatures": 780,
+    "indexedSubDistrictFeatures": 6578,
+    "excludedDisputedDistrictFeatures": 28,
+    "incompleteSubDistrictFeatures": 89,
+    "statesWithoutSubDistrictRows": [
+      "Arunachal Pradesh",
+      "Meghalaya"
+    ]
+  },
+  "controlledWorkflowEvaluation": {
+    "cases": 10,
+    "truePositives": 6,
+    "trueNegatives": 4,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "accuracy": 1,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "casesDetail": [
+      {
+        "id": "W01",
+        "type": "CLEAN_NEW_PARCEL",
+        "expected": "ALLOW",
+        "actual": "ALLOW"
+      },
+      {
+        "id": "W02",
+        "type": "DUPLICATE_SAME_ADMIN_SCOPE",
+        "expected": "REJECT",
+        "actual": "REJECT"
+      },
+      {
+        "id": "W03",
+        "type": "SAME_IDENTIFIER_DIFFERENT_STATE",
+        "expected": "ALLOW",
+        "actual": "ALLOW"
+      },
+      {
+        "id": "W04",
+        "type": "PROPOSAL_BY_NON_CLAIMANT",
+        "expected": "REJECT",
+        "actual": "REJECT"
+      },
+      {
+        "id": "W05",
+        "type": "PROPOSAL_WITHOUT_REVIEW",
+        "expected": "REJECT",
+        "actual": "REJECT"
+      },
+      {
+        "id": "W06",
+        "type": "DESIGNATED_BUYER_ACCEPTS_PROPOSAL",
+        "expected": "ALLOW",
+        "actual": "ALLOW"
+      },
+      {
+        "id": "W07",
+        "type": "UNAUTHORISED_BUYER_ACCEPTANCE",
+        "expected": "REJECT",
+        "actual": "REJECT"
+      },
+      {
+        "id": "W08",
+        "type": "FINALIZE_ACCEPTED_WORKFLOW",
+        "expected": "ALLOW",
+        "actual": "ALLOW"
+      },
+      {
+        "id": "W09",
+        "type": "FINALIZE_AFTER_CLAIMANT_CHANGED",
+        "expected": "REJECT",
+        "actual": "REJECT"
+      },
+      {
+        "id": "W10",
+        "type": "FINALIZE_BEFORE_BUYER_ACCEPTANCE",
+        "expected": "REJECT",
+        "actual": "REJECT"
+      }
+    ],
+    "note": "These are deterministic policy/unit-test scenarios executed against the same workflowPolicy functions used by the API. They are not real-world transaction, fraud or land-title validation results."
+  },
+  "fraudRiskEvaluation": {
+    "model": "explainable-ensemble-logistic+rules-v3-synthetic",
+    "features": [
+      "duplicateParcel",
+      "claimantNameMismatch",
+      "duplicateHash",
+      "suspiciousDocument",
+      "missingFields",
+      "transferWithoutApproval",
+      "parcelMismatch",
+      "documentConsistencyLow",
+      "multipleActiveOwners",
+      "identityMismatch"
+    ],
+    "trainCases": 768,
+    "testCases": 256,
+    "holdout": {
+      "cases": 256,
+      "tp": 143,
+      "tn": 108,
+      "fp": 5,
+      "fn": 0,
+      "accuracy": 0.98046875,
+      "precision": 0.9662162162162162,
+      "recall": 1,
+      "f1": 0.9828178694158076
+    },
+    "note": "Deterministic, synthetic, rule-labelled holdout evaluation only. It demonstrates reproducibility and model behaviour, not real-world fraud accuracy, government-verified ownership or legal adjudication."
+  },
+  "note": "Official DILRMP metrics are genuine State/UT aggregates. The 14 village-level rows are historical. Workflow and fraud-risk scenarios are controlled tests, not government transaction records."
+}

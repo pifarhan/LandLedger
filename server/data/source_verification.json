@@ -1,0 +1,276 @@
+{
+  "verifiedAt": "2026-11-14",
+  "sources": [
+    {
+      "name": "DILRMP CLR State/UT-wise live report",
+      "url": "https://dilrmp.gov.in/physicalProgressReports/clr/state-level",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "36 State/UT aggregate CLR indicators. The non-www canonical report is the source for the 783-district, 650,819-village and 403,404,057-RoR snapshot."
+    },
+    {
+      "name": "DILRMP national programme / OGD catalogue",
+      "url": "https://www.data.gov.in/catalog/digital-india-land-records-modernization-programme-progress",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Programme and open-data catalogue context."
+    },
+    {
+      "name": "NGDRS national dashboard",
+      "url": "https://ngdrs.gov.in/NGDRS_Website/",
+      "publisher": "Department of Land Resources / NGDRS, Government of India",
+      "retrievedAt": "2026-11-13",
+      "role": "Current national aggregate and 26 State IGR live-server rows; non-reporting jurisdictions remain null.",
+      "detailUrl": "https://ngdrs.gov.in/NGDRS_Website/data-grid.php?lang=en"
+    },
+    {
+      "name": "Local Government Directory (LGD)",
+      "url": "https://lgdirectory.gov.in/",
+      "publisher": "Ministry of Panchayati Raj, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Current administrative jurisdiction master/codes used to normalize official State/UT hierarchy."
+    },
+    {
+      "name": "Survey of India ABDB",
+      "url": "https://surveyofindia.gov.in/pages/administrative-boundary-data-base-abdb-",
+      "downloadUrl": "https://surveyofindia.gov.in/documents/State_District_Subdistrict_PAN%20INDIA.rar",
+      "publisher": "Survey of India, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "State, district and sub-district administrative boundary vectors; not parcel/title data.",
+      "archiveSha256": "b8325e5d9dd0f04a6663d775363fe38cd2f23bd9dbae3fb7118b4e6e0ce0bcb7"
+    },
+    {
+      "name": "DoLR State RoR-on-Web directory",
+      "url": "https://dilrmp.gov.in/dilrmpold/physcial/report/pdf/stateror",
+      "publisher": "Department of Land Resources, Government of India",
+      "asOf": "2026-05-08",
+      "role": "Dated directory/portal references. The published snapshot has 35 rows and excludes Ladakh; not evidence of parcel-level API access."
+    },
+    {
+      "name": "NIC BhuNaksha customization list",
+      "url": "https://www.bhunaksha.nic.in/bhunaksha/customization.jsp",
+      "publisher": "National Informatics Centre, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Software customization listing only; not proof of open parcel ownership data/API."
+    },
+    {
+      "name": "NGDRS data-entry form State/UT registration table",
+      "url": "https://ngdrs.gov.in/NGDRS_Website/data-grid.php?lang=en",
+      "publisher": "Department of Land Resources / NGDRS, Government of India",
+      "sourcePageSnapshotAt": "2026-08-10",
+      "retrievedAt": "2026-11-13",
+      "role": "Separate manual data-entry reporting table for five States. Historical row last-updated dates are preserved; not merged with live IGR server data."
+    },
+    {
+      "name": "LACRRIS national dashboard",
+      "url": "https://larr.dolr.gov.in/faces/common/dashboard.xhtml",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "National KPIs: projects, project segments, acquired hectares, displaced/affected families, compensation and R&R. Page notes that State/UT Administrations and DoLR update the data; no national as-of date is shown."
+    },
+    {
+      "name": "LACRRIS State/UT-wise acquisition report",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg2.xhtml",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Interactive State/UT report with 36 State/UT choices and published project, area, timeline, family and compensation fields. Not a static nationwide case export."
+    },
+    {
+      "name": "LACRRIS district/project reports",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg3.xhtml",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Interactive district-wise and project-wise public acquisition report pages."
+    },
+    {
+      "name": "BanglarBhumi land records",
+      "url": "https://banglarbhumi.gov.in/",
+      "publisher": "Land & Land Reforms and Refugee Relief & Rehabilitation Department, Government of West Bengal",
+      "retrievedAt": "2026-11-14",
+      "role": "Official citizen portal exposes RS-LR Plot Information and mutation status/services; no unrestricted bulk owner export assumed."
+    },
+    {
+      "name": "West Bengal UDMA Know Your Property procedure",
+      "url": "https://udma.wb.gov.in/page/cms/know_your_property_procedure_a353e3",
+      "publisher": "Department of Urban Development & Municipal Affairs, Government of West Bengal",
+      "retrievedAt": "2026-11-14",
+      "role": "Official instructions for OTP-based property-record/encumbrance lookup by district/block/mouza and khatian/plot number."
+    },
+    {
+      "name": "DILRMP MIS 4.0 Map Digitization State/UT-wise report",
+      "url": "https://www.dilrmp.gov.in/physicalProgressReports/map/state-level",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Current map digitization report schema for cadastral map digitization, geo-reference, land parcels and ULPIN. The complete all-State/UT row extract is not bundled; a runtime connector is provided."
+    },
+    {
+      "name": "DILRMP MIS 3.0 legacy map/ULPIN State/UT report",
+      "url": "https://dilrmp.gov.in/dilrmpold/MapULPIN/MapDiditizaionStateList",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Legacy national aggregate snapshot kept separate from MIS 4.0; exact data-as-of date is not printed on the captured page."
+    },
+    {
+      "name": "LACRRIS national dashboard",
+      "url": "https://larr.dolr.gov.in/faces/common/dashboard.xhtml",
+      "publisher": "Department of Land Resources, Government of India / NIC",
+      "retrievedAt": "2026-11-14",
+      "role": "Public national project/area/displaced-family/affected-family/compensation/R&R aggregates; recent indexed snapshot with exact data-as-of date not exposed."
+    },
+    {
+      "name": "LACRRIS State/UT-wise acquisition progress report",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg2.xhtml",
+      "publisher": "Department of Land Resources, Government of India / NIC",
+      "retrievedAt": "2026-11-14",
+      "role": "Public filter report listing all State/UT selector values and fields for projects, land extent, award/payment/possession, compensation and R&R. A blank no-selection report is not zero acquisitions."
+    },
+    {
+      "name": "State/UT government land-record portal supplements",
+      "url": "https://dilrmp.gov.in/dilrmpold/State-RoR-Web",
+      "publisher": "Department of Land Resources and respective State/UT authorities",
+      "retrievedAt": "2026-11-14",
+      "role": "Portal links supplemented with later official state sources for Arunachal Pradesh, Haryana, Kerala, Ladakh, Madhya Pradesh, Rajasthan, Sikkim, Dadra & Nagar Haveli and Daman & Diu, Uttar Pradesh, and Meghalaya authority context."
+    },
+    {
+      "name": "Official land-acquisition notice catalogues: Maharashtra, Odisha, Puducherry",
+      "url": "https://pune.gov.in/en/document-category/land-acquisition-awards/",
+      "publisher": "District/State administrations; NIC-hosted state portals",
+      "retrievedAt": "2026-11-14",
+      "role": "Public award/notification index pages captured into catalogue references. Where PDFs/details are unavailable in extracted page content, numeric area and compensation remain null."
+    },
+    {
+      "name": "Meghalaya Revenue & Disaster Management Department",
+      "url": "https://www.meghalaya.gov.in/dept/39",
+      "publisher": "Government of Meghalaya",
+      "retrievedAt": "2026-11-14",
+      "role": "Official legal/administrative context for Meghalaya: land administration involves Autonomous District Councils and there is no uniform State-wide RoR."
+    },
+    {
+      "name": "Mizoram e-Ram and Land Records Programme",
+      "url": "https://eram.mizoram.gov.in/",
+      "publisher": "Land Revenue & Settlement Department, Government of Mizoram",
+      "retrievedAt": "2026-11-14",
+      "role": "Official online application service; department states State-wide land-record digitisation/coverage is limited and does not represent a complete current RoR."
+    },
+    {
+      "name": "Nagaland Land Records (ROR) portal and Directorate",
+      "url": "https://www.lrsror.nagaland.gov.in/home",
+      "publisher": "Directorate of Land Records and Survey, Government of Nagaland",
+      "retrievedAt": "2026-11-14",
+      "role": "Official ROR/digital map portal; Directorate describes the recorded survey scope as limited to Dimapur, towns, administrative headquarters and government/surveyed pocket lands, with customary land systems."
+    },
+    {
+      "name": "Nashik District land acquisition awards catalogue",
+      "url": "https://nashik.gov.in/en/document-category/land-acquisition-awards/",
+      "publisher": "District Administration, Nashik, Government of Maharashtra",
+      "retrievedAt": "2026-11-14",
+      "role": "Official award index with multiple final awards dated 2026; linked PDFs hold details."
+    },
+    {
+      "name": "Kerala Revenue Department Government Orders index",
+      "url": "https://eoffice.kerala.gov.in/EofficePortal/getGOCurrentDetails?dept_id=26",
+      "publisher": "Revenue Department, Government of Kerala",
+      "retrievedAt": "2026-11-14",
+      "role": "Official Revenue Department GO index with land-acquisition and award-extension orders; selected project-area values appear in titles."
+    },
+    {
+      "name": "Tamil Nadu Extraordinary Gazette 2026",
+      "url": "https://stationeryprinting.tn.gov.in/extra_ordinary_lists.php?id=MjAyNg%3D%3D",
+      "publisher": "Stationery and Printing Department, Government of Tamil Nadu",
+      "retrievedAt": "2026-11-14",
+      "role": "Official Gazette index with 2026 land-acquisition notices under Highways and Industrial Purposes Acts."
+    },
+    {
+      "name": "RIICO JPMIA land-acquisition office order",
+      "url": "https://riico.rajasthan.gov.in/writereaddata/Orders/202603131026286472492img20260313_10240100.pdf",
+      "publisher": "Rajasthan State Industrial Development and Investment Corporation, Government of Rajasthan",
+      "retrievedAt": "2026-11-14",
+      "role": "Official project-level order stating 1,086.4494 hectares acquired for JPMIA; parcel/owner schedule not bundled."
+    },
+    {
+      "name": "GMADA land acquisition public notices",
+      "url": "https://gmada.gov.in/en/public-notice-regarding-award-no-584",
+      "publisher": "Greater Mohali Area Development Authority, Government of Punjab",
+      "retrievedAt": "2026-11-14",
+      "role": "Official public notice catalogue with village-related land acquisition PDFs; details require document extraction."
+    },
+    {
+      "name": "DILRMP 3.0 Operational Guidelines 2026-2031",
+      "url": "https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2026/08/20260825865791200.pdf",
+      "publisher": "Department of Land Resources, Government of India",
+      "retrievedAt": "2026-11-14",
+      "role": "Confirms federated Land Stack, secure API sharing subject to law/privacy/security and State/UT data ownership/custody."
+    },
+    {
+      "name": "RBIH ULI Next-Gen LRS docs",
+      "url": "https://docs.rbihub.in/unified-lending-interface/next-gen/land-records",
+      "publisher": "Reserve Bank Innovation Hub",
+      "retrievedAt": "2026-11-14",
+      "role": "Documents asynchronous, parcel-specific owner/parcel/encumbrance lookup across 12 State backends; does not provide open bulk records."
+    },
+    {
+      "name": "RBIH LRS API integration guide v3",
+      "url": "https://docs.rbihub.in/unified-lending-interface/getting-started/service-integration/lrs",
+      "publisher": "Reserve Bank Innovation Hub",
+      "retrievedAt": "2026-11-14",
+      "role": "Documents 14 State lender flow and mandatory consent-id header for master data and land ownership calls."
+    },
+    {
+      "name": "RBIH lender integration prerequisites",
+      "url": "https://docs.rbihub.in/unified-lending-interface/getting-started/service-integration",
+      "publisher": "Reserve Bank Innovation Hub",
+      "retrievedAt": "2026-11-14",
+      "role": "Confirms institutional onboarding and IP whitelisting are prerequisites to credentials and use."
+    },
+    {
+      "id": "india_property_register_api",
+      "url": "https://indiapropertyregister.com/api/docs",
+      "retrievedAt": "2026-11-14",
+      "status": "PROVIDER_DOCUMENTATION_REVIEWED_NOT_INDEPENDENTLY_AUDITED",
+      "coverageClaim": "Provider documentation says plots are loaded for 28/36 jurisdictions, with coverage by state and data layer; API docs show lookup and plot detail endpoints.",
+      "role": "Optional paid on-demand individual parcel lookup; API response source/read date is displayed when supplied. Provider claims are not independent audit evidence."
+    }
+  ],
+  "crossChecks": {
+    "dilrmpStateRecords": 36,
+    "dilrmpDistrictsSum": 783,
+    "dilrmpTehsilsSum": 6974,
+    "dilrmpVillagesSum": 650819,
+    "dilrmpRorSum": 403404057,
+    "abdbOfficialStateCoverage": 36,
+    "abdbAssignedDistrictFeatures": 780,
+    "abdbIndexedSubDistrictFeatures": 6578,
+    "dilrmpRorComputerizedSum": 402113713,
+    "ngdrsReportingRows": 26,
+    "ngdrsDocumentsRegistered": 60837981,
+    "dilrmpStateRowsWithAggregateLandOwnerField": 36,
+    "dilrmpAggregateLandOwnerSum": 510604000,
+    "lacrrisNationalProjects": 4862,
+    "lacrrisNationalAreaAcquiredHectares": 1885757,
+    "lacrrisNationalCompensationINR": 12981041764,
+    "statePortalDirectoryRows": 36,
+    "statePortalUrls": 34,
+    "lacrrisStateSelectors": 36,
+    "lacrrisStateValuesImported": 0,
+    "lacrrisNationalAreaHectare": 1885809,
+    "legacyMis3LandParcelsNational": 287570549
+  },
+  "limitations": [
+    "The 14 village-level DILRMP rows in dilrmp_real_snapshot.json are a historical source-derived subset for Karnataka and West Bengal only (July/August 2024); they are not a 36-State village census.",
+    "ABDB includes disputed/unassigned and incomplete attributes; the project records rather than fills these gaps.",
+    "NGDRS live IGR integration has 26 reporting jurisdictions; 10 rows are explicitly marked not reported in this snapshot. A separate manual data-entry table is not merged into the live IGR feed.",
+    "NGDRS manual data-entry form rows for Kerala, Madhya Pradesh, Sikkim, Tamil Nadu and Uttar Pradesh are stored in a separate historical snapshot; not merged with current 26 live IGR rows or the national live-feed total.",
+    "LACRRIS project-area totals do not identify universal parcel IDs; parcel acquisition status must remain UNKNOWN until an official parcel-matched record is present.",
+    "The parcel and acquisition-case evidence stores are intentionally empty until a lawful source record is imported with provenance.",
+    "LACRRIS national dashboard values are national aggregates; the public State/UT report requires a state selection. The package therefore stores null state-specific figures until a selected report or authorised export is ingested.",
+    "Official acquisition notice catalogues for Maharashtra, Odisha and Puducherry are indexed as source references; missing numeric fields were not inferred from titles.",
+    "Meghalaya government describes the absence of a uniform State-wide RoR and a role for Autonomous District Councils; local records require competent authority-level verification.",
+    "Legacy DILRMP MIS 3.0 map/ULPIN metrics are not comparable to current MIS 4.0 and are kept separately. Only the West Bengal district grand total was fully captured from the legacy page in this build.",
+    "No public nationwide owner-by-owner bulk dataset or open bulk-owner API was established.",
+    "RBIH Next-Gen LRS supports 12 State backends for authorised single-parcel queries; a separate v3 guide documents 14 State lender integrations. No RBIH credentials or consent artefacts are bundled.",
+    "DILRMP 3.0 uses federated State/UT data custody. It does not make all source records an openly downloadable national owner list.",
+    "A matched RoR holder/parcel entry is source-record evidence, not a conclusive legal title adjudication.",
+    "India Property Register is an independent commercial provider, not a government endpoint. Its documented 28/36 plot coverage and record counts are provider claims; live coverage, record freshness, and each underlying government source must be checked. This build makes single parcel lookups only, does not bulk-import its data and does not use it for AI model training/evaluation."
+  ],
+  "dilrmpMis4Snapshot": "dilrmp_mis4_20261113.json"
+}

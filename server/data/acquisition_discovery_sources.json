@@ -1,0 +1,150 @@
+{
+  "dataset": "Allowlisted official land-acquisition publication indexes for on-demand discovery",
+  "generatedOn": "2026-11-14",
+  "policy": "Discovery yields notice candidates only. It never infers that land is acquired, awards are paid, or possession is taken. An authority must review the linked official notice/document and import structured values with evidence.",
+  "sources": [
+    {
+      "id": "lacrris-state-report",
+      "stateCode": null,
+      "state": "All India",
+      "district": null,
+      "authority": "Department of Land Resources, Government of India / NIC",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg2.xhtml",
+      "kind": "interactive-report",
+      "scope": "State/UT and project filtered report; requires selection in the public interface.",
+      "allowedHost": "larr.dolr.gov.in"
+    },
+    {
+      "id": "egazette-land-acquisition",
+      "stateCode": null,
+      "state": "All India",
+      "district": null,
+      "authority": "eGazette of India, Government of India",
+      "url": "https://egazette.gov.in/RecentUploads.aspx?Category=3",
+      "kind": "gazette-index",
+      "scope": "National land-acquisition Gazette notification index.",
+      "allowedHost": "egazette.gov.in"
+    },
+    {
+      "id": "pune-land-acquisition-awards",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "district": "Pune",
+      "authority": "District Administration, Pune, Government of Maharashtra",
+      "url": "https://pune.gov.in/en/document-category/land-acquisition-awards/",
+      "kind": "award-index",
+      "scope": "District award catalogue; award PDF is required for case/parcel/compensation extraction.",
+      "allowedHost": "pune.gov.in"
+    },
+    {
+      "id": "nashik-land-acquisition-awards",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "district": "Nashik",
+      "authority": "District Administration, Nashik, Government of Maharashtra",
+      "url": "https://nashik.gov.in/en/document-category/land-acquisition-awards/",
+      "kind": "award-index",
+      "scope": "District award catalogue; award PDF is required for case/parcel/compensation extraction.",
+      "allowedHost": "nashik.gov.in"
+    },
+    {
+      "id": "gadchiroli-land-acquisition",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "district": "Gadchiroli",
+      "authority": "District Administration, Gadchiroli, Government of Maharashtra",
+      "url": "https://gadchiroli.gov.in/notice_category/announcements/",
+      "kind": "notice-index",
+      "scope": "District notices include acquisition notifications and awards.",
+      "allowedHost": "gadchiroli.gov.in"
+    },
+    {
+      "id": "puducherry-land-acquisition",
+      "stateCode": "PY",
+      "state": "Puducherry",
+      "district": null,
+      "authority": "Department of Revenue and Disaster Management, Government of Puducherry",
+      "url": "https://revenue.py.gov.in/notifications.html",
+      "kind": "notice-index",
+      "scope": "State notice index includes SIA, notifications, award-enquiry, award and compensation records.",
+      "allowedHost": "revenue.py.gov.in"
+    },
+    {
+      "id": "odisha-land-acquisition",
+      "stateCode": "OD",
+      "state": "Odisha",
+      "district": null,
+      "authority": "Revenue and Disaster Management Department, Government of Odisha",
+      "url": "https://revenue.odisha.gov.in/en/communication/land-acquisition",
+      "kind": "notice-index",
+      "scope": "State land-acquisition communications, declarations, SIA notices and LARRMS/Bhuarjan records.",
+      "allowedHost": "revenue.odisha.gov.in"
+    },
+    {
+      "id": "tamil-nadu-gazette-2026",
+      "stateCode": "TN",
+      "state": "Tamil Nadu",
+      "district": null,
+      "authority": "Stationery and Printing Department, Government of Tamil Nadu",
+      "url": "https://stationeryprinting.tn.gov.in/extra_ordinary_lists.php?id=MjAyNg%3D%3D",
+      "kind": "gazette-index",
+      "scope": "2026 extraordinary gazette index, including land-acquisition notifications.",
+      "allowedHost": "stationeryprinting.tn.gov.in"
+    },
+    {
+      "id": "kerala-revenue-go-index",
+      "stateCode": "KL",
+      "state": "Kerala",
+      "district": null,
+      "authority": "Revenue Department, Government of Kerala",
+      "url": "https://eoffice.kerala.gov.in/EofficePortal/getGOCurrentDetails?dept_id=26",
+      "kind": "government-order-index",
+      "scope": "Revenue department government orders; individual order must be inspected for acquisition scope.",
+      "allowedHost": "eoffice.kerala.gov.in"
+    },
+    {
+      "id": "rajasthan-riico-acquisition",
+      "stateCode": "RJ",
+      "state": "Rajasthan",
+      "district": null,
+      "authority": "RIICO, Government of Rajasthan",
+      "url": "https://riico.rajasthan.gov.in/",
+      "kind": "authority-index",
+      "scope": "Industrial land and acquisition/allotment references; not a complete statewide acquisition register.",
+      "allowedHost": "riico.rajasthan.gov.in"
+    },
+    {
+      "id": "punjab-gmada",
+      "stateCode": "PB",
+      "state": "Punjab",
+      "district": "SAS Nagar / Mohali",
+      "authority": "Greater Mohali Area Development Authority, Government of Punjab",
+      "url": "https://gmada.gov.in/",
+      "kind": "authority-index",
+      "scope": "Selected official award and acquisition notices.",
+      "allowedHost": "gmada.gov.in"
+    },
+    {
+      "id": "delhi-revenue-bamnoli-awards",
+      "stateCode": "DL",
+      "state": "NCT of Delhi",
+      "district": "South West Delhi",
+      "authority": "Department of Revenue, Government of NCT of Delhi",
+      "url": "https://revenue.delhi.gov.in/land-acquisition/7227",
+      "kind": "official-award-catalogue",
+      "scope": "Eight downloadable official land-acquisition award PDFs for village Bamnoli; award-index metadata only.",
+      "allowedHost": "revenue.delhi.gov.in"
+    },
+    {
+      "id": "delhi-revenue-bharthal-awards",
+      "stateCode": "DL",
+      "state": "NCT of Delhi",
+      "district": "South West Delhi",
+      "authority": "Department of Revenue, Government of NCT of Delhi",
+      "url": "https://revenue.delhi.gov.in/land-acquisition/7280",
+      "kind": "official-award-catalogue",
+      "scope": "Eleven downloadable official land-acquisition award PDFs for village Bharthal; award-index metadata only.",
+      "allowedHost": "revenue.delhi.gov.in"
+    }
+  ]
+}

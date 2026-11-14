@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-11-14T10:35:54.398Z",
+  "checks": [
+    {
+      "id": "SEC-01",
+      "name": "Protected routes require authentication",
+      "passed": true,
+      "evidence": "JWT middleware present."
+    },
+    {
+      "id": "SEC-02",
+      "name": "Authority-only operations",
+      "passed": true,
+      "evidence": "Role gate present."
+    },
+    {
+      "id": "SEC-03",
+      "name": "Owner verification before transfer",
+      "passed": true,
+      "evidence": "Seller ownership gate present."
+    },
+    {
+      "id": "SEC-04",
+      "name": "Approved property required before transfer",
+      "passed": true,
+      "evidence": "Workflow state gate present."
+    },
+    {
+      "id": "SEC-05",
+      "name": "Document digest binding",
+      "passed": true,
+      "evidence": "SHA-256 digest persisted."
+    },
+    {
+      "id": "SEC-06",
+      "name": "Pre-ledger document validation",
+      "passed": true,
+      "evidence": "Document screening before ledger operation."
+    },
+    {
+      "id": "SEC-07",
+      "name": "Ledger integrity verification",
+      "passed": true,
+      "evidence": "Hash-chain verification endpoint present."
+    },
+    {
+      "id": "SEC-08",
+      "name": "Fabric integration status control",
+      "passed": true,
+      "evidence": "Permissioned ledger integration path present."
+    },
+    {
+      "id": "SEC-09",
+      "name": "No plaintext password storage in source",
+      "passed": true,
+      "evidence": "Application source does not directly persist request password values."
+    },
+    {
+      "id": "SEC-10",
+      "name": "Sensitive secret configuration is environment-driven",
+      "passed": true,
+      "evidence": "Configuration uses environment variables."
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "passRate": 1,
+  "scope": "Automated application-security control verification. Not a formal penetration test, certification, or independent security audit."
+}

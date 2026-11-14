@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-11-14T10:35:54.359Z",
+  "checks": [
+    {
+      "id": "AUTH-01",
+      "control": "JWT authentication on protected API routes",
+      "passed": true,
+      "evidence": "Protected transaction and data routes use JWT middleware."
+    },
+    {
+      "id": "AUTH-02",
+      "control": "Role enforcement for authority workflow actions",
+      "passed": true,
+      "evidence": "Approval, finalization, analytics and ledger verification require authority/admin role."
+    },
+    {
+      "id": "AUTH-03",
+      "control": "Current claimant required before transfer proposal",
+      "passed": true,
+      "evidence": "Workflow policy checks the authenticated account against the current claimant reference."
+    },
+    {
+      "id": "AUTH-04",
+      "control": "Approved-claim state gate before transfer",
+      "passed": true,
+      "evidence": "Only workflow-reviewed claims can enter a transfer workflow."
+    },
+    {
+      "id": "AUTH-05",
+      "control": "Public registration cannot create authority/admin accounts",
+      "passed": true,
+      "evidence": "Authority roles are excluded from public signup."
+    },
+    {
+      "id": "DOC-01",
+      "control": "SHA-256 document fingerprint",
+      "passed": true,
+      "evidence": "A source file digest is persisted for integrity tracking."
+    },
+    {
+      "id": "DOC-02",
+      "control": "Pre-ledger document screening",
+      "passed": true,
+      "evidence": "Document validation runs before event submission."
+    },
+    {
+      "id": "DOC-03",
+      "control": "Upload content-signature checks",
+      "passed": true,
+      "evidence": "File extension/MIME allowlist plus PDF/image signature and text binary checks."
+    },
+    {
+      "id": "LED-01",
+      "control": "Ledger integrity verification endpoint",
+      "passed": true,
+      "evidence": "Application ledger hash chain can be verified by authority users."
+    },
+    {
+      "id": "LED-02",
+      "control": "Recursive canonical JSON hashing",
+      "passed": true,
+      "evidence": "Nested payload objects are included in deterministic hash serialization."
+    },
+    {
+      "id": "FAB-01",
+      "control": "Fabric application-service identity gate",
+      "passed": true,
+      "evidence": "Claim submissions and buyer workflow transactions require an application-service certificate."
+    },
+    {
+      "id": "FAB-02",
+      "control": "Fabric authority-only review gate",
+      "passed": true,
+      "evidence": "Approval and finalization require a separate authority certificate."
+    },
+    {
+      "id": "FAB-03",
+      "control": "Fabric on-channel personal-data minimisation",
+      "passed": true,
+      "evidence": "Public channel state stores keyed references instead of raw owner names, parcel identifiers, addresses or account IDs."
+    },
+    {
+      "id": "FAB-04",
+      "control": "Strong HMAC key required for Fabric references",
+      "passed": true,
+      "evidence": "Application requires a 32-byte HMAC secret and chaincode validates HMAC references."
+    }
+  ],
+  "passRate": 1,
+  "note": "Static source-control audit only. It is not dynamic security testing, penetration testing, identity proofing, or certification of deployed Fabric credentials."
+}

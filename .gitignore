@@ -1,0 +1,26 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+server/.env
+server/.env.*
+!server/.env.example
+client/.env
+client/.env.*
+
+# Dependencies and generated local state
+node_modules/
+client/node_modules/
+server/node_modules/
+.fabric-samples/
+server/.env.fabric
+server/data/ledger.json
+server/data/uploads/
+server/data/private/
+research/private-data/records.csv
+research/private-data/manifest.json
+research/trained-model/
+*.log
+.DS_Store
+# Large research datasets
+/server/data/abdb/raw/*.rar

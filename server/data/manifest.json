@@ -1,0 +1,170 @@
+{
+  "generatedAt": "2026-11-14",
+  "policy": "Checksums cover official public snapshots, source-derived administrative reference data, selected official acquisition award extracts and capability metadata. No person-level owner identity or owner-to-parcel rows are bundled. Hashes establish file integrity after capture, not the truth or legal effect of source records.",
+  "files": {
+    "abdb/ABDB_CATALOG.json": {
+      "bytes": 3051,
+      "sha256": "5a53e0b1b830a307ffebca265746bcbc0dabfb14e956b54b56bf302d98201bf3"
+    },
+    "abdb/abdb-hierarchy.json": {
+      "bytes": 3372450,
+      "sha256": "2c4a9c75a50d26c2531fb258265cfadb2932ccadf4b24bf7dd8a5652b8397561"
+    },
+    "abdb/districts.csv": {
+      "bytes": 52478,
+      "sha256": "2087fb24694d0ea8eadc24f9970e99e52bc9b8bd072efc8067a826484f3758eb"
+    },
+    "abdb/raw/manifest.json": {
+      "bytes": 2925,
+      "sha256": "92a6efda284f085fc5def54fb43ed558d055804d8f5a7fac0af7a8a442c79398"
+    },
+    "abdb/subdistricts.csv": {
+      "bytes": 866217,
+      "sha256": "f5ce2616f089bc1947291ca16438a729d29a85fbf1ecc39023a53fa474cbeea8"
+    },
+    "acquisition_discovery_sources.json": {
+      "bytes": 6393,
+      "sha256": "a4700eab55e1a086e2a103fe0ded31b5250ed377b7657d3f33be6ccbe3a587f1"
+    },
+    "dilrmp_map_current_mis4.json": {
+      "bytes": 701,
+      "sha256": "c643f05559b7043748bd026be78ccefcea80d92c22b61189dfd6db803697a2d6"
+    },
+    "dilrmp_map_legacy_mis3.json": {
+      "bytes": 4433,
+      "sha256": "3bb15d9eccac08217b613e587fb13b39a55718f087657bb8e9d6b1f2a2d982cf"
+    },
+    "dilrmp_mis4_20261113.json": {
+      "bytes": 1615,
+      "sha256": "f2d16f007feb24e71db83ecd5aaa7a24d82e92255972ffd9015d8c5769dedd01"
+    },
+    "dilrmp_national_snapshot.json": {
+      "bytes": 1348,
+      "sha256": "779764862d2ff957108dc67e3fb907e8525ca988e45d8fd5483a1b0f29cca8d8"
+    },
+    "dilrmp_real_snapshot.csv": {
+      "bytes": 1325,
+      "sha256": "6a7f42b1110b23666be5a0b7ca651a7a043920fed774607897d889c87526bb7f"
+    },
+    "dilrmp_real_snapshot.json": {
+      "bytes": 5554,
+      "sha256": "c564ce834c10a570237af142f8e5d368e08cbad573122a2862c8ffb4cec0e459"
+    },
+    "dilrmp_state_level_current.csv": {
+      "bytes": 9468,
+      "sha256": "5239b2d616cb545b1342bb0305607b9d8bce3948270eee1aee8ffb3c8835eecb"
+    },
+    "dilrmp_state_level_current.json": {
+      "bytes": 119131,
+      "sha256": "36eb5f801b3b539e54b38a32154d6e8021eebe275161c0fc27eff4cfb2b3b555"
+    },
+    "federated_land_records_registry.json": {
+      "bytes": 39122,
+      "sha256": "c67664b520ef4c776c6dcae0641ca53c99dc94d01ceb0e19336435190b0058d5"
+    },
+    "government_data_source_registry.json": {
+      "bytes": 8214,
+      "sha256": "4d86613a5cb6960bb3b0b73e6f43c815e24e7b69c8432db582abc087f47c6740"
+    },
+    "land_acquisition_awards_extracted.csv": {
+      "bytes": 1925,
+      "sha256": "6a6b178d36a1b8ee33be9a0dc5ffe21819a327427fcc2c0a13f0a96b9df452ea"
+    },
+    "land_acquisition_awards_extracted.json": {
+      "bytes": 8184,
+      "sha256": "e4cbd46d27cc53fdd4725044fccfc39ddac81104259e51e3b1b6cbf186d994a3"
+    },
+    "land_acquisition_cases.json": {
+      "bytes": 211,
+      "sha256": "e105ba270902050ca82f33e033dd7a1a05857030258f622e98741ea4c0bdfe7e"
+    },
+    "land_acquisition_discovered.json": {
+      "bytes": 306,
+      "sha256": "dad9094f46d57eb3678dc995fb223a175d34b6ecc8b452f07f98524b90779f9f"
+    },
+    "land_acquisition_import_template.csv": {
+      "bytes": 356,
+      "sha256": "ae7c7cde85cd43f6e2bc4915eae766505f009952d2ce244898c0c8c54419b1c3"
+    },
+    "land_acquisition_lacrris_snapshot.json": {
+      "bytes": 2839,
+      "sha256": "3cc4380f0a6cf4d3fd856a0f8a0f8a1ab3c6573f511c4be388ccd5909aca6256"
+    },
+    "land_acquisition_national.json": {
+      "bytes": 35844,
+      "sha256": "fd1db25de121dc6726370388221cf3bfda070bed37498c4b566b95c966ca5547"
+    },
+    "land_acquisition_notices.csv": {
+      "bytes": 9637,
+      "sha256": "a6c60bf5b304f4e0d48efff5060a934e23b283c0ecd314552898291c05a3e6dd"
+    },
+    "land_acquisition_notices.json": {
+      "bytes": 85372,
+      "sha256": "e4f1fcd6c8ee1fc29856bd08f8c64dde95c288e675fabcb2a21e8c184aebfe0b"
+    },
+    "land_acquisition_state_coverage.csv": {
+      "bytes": 10710,
+      "sha256": "93cd63c706c652e1515ba540c410acc858637c0b3d0326232112d5b211ed474c"
+    },
+    "ngdrs_data_entry_form_snapshot.csv": {
+      "bytes": 506,
+      "sha256": "bdac645f35bb2da7a4d6dc09112f1b6e2b9da361346d9358ce4077b1198d3747"
+    },
+    "ngdrs_data_entry_form_snapshot.json": {
+      "bytes": 2640,
+      "sha256": "a351f204e55f8d0df3d2e7d8dff46831780f78f9efb3f3a796da4eb78f82898d"
+    },
+    "ngdrs_registration_activity.csv": {
+      "bytes": 2973,
+      "sha256": "90b478714870b6071a35dadd059825b9b3fa0915190594f4aad4e557e58a2a8d"
+    },
+    "ngdrs_registration_activity.json": {
+      "bytes": 18898,
+      "sha256": "f6b0aee1de4a92dbbcd537eaeacbad95938eb29eb90ae12b4632af3461f2e32f"
+    },
+    "official-state-ut-registry.csv": {
+      "bytes": 12976,
+      "sha256": "781c31a62e375a7ad87d7c0f64588f95ed415484548ca229e2e6037ea9c257cf"
+    },
+    "official-state-ut-registry.json": {
+      "bytes": 87060,
+      "sha256": "b1883718612e2bacced44fae93cd7d55dec8cb6cceffdf6bb71d30eb9c9c6597"
+    },
+    "parcel_ownership_evidence.json": {
+      "bytes": 1017,
+      "sha256": "4762abf0e4fabe60ae1963241261f039c4225ff77f4c98191f20688102805a53"
+    },
+    "parcel_ownership_import_template.csv": {
+      "bytes": 239,
+      "sha256": "85c549f2a4e00456922ffbe39fdb79576d1eadc35f2e1af1601d297070db91d4"
+    },
+    "schemas/land-acquisition-case.schema.json": {
+      "bytes": 2741,
+      "sha256": "55fea1b9091dbd1377fc8482cdaa7cc2567ad0c646b4030bd68b629379450615"
+    },
+    "schemas/parcel-ownership-evidence.schema.json": {
+      "bytes": 3387,
+      "sha256": "7d344979cc6490096bb1dec2c0a9e229cabb9a19f2cf78e1e3f69233a452f33b"
+    },
+    "source_verification.json": {
+      "bytes": 17363,
+      "sha256": "9ea2f91e456af55f461ac5f372996e6fdfa0b7f7f8a45c79b233a9af59eb8079"
+    },
+    "state_land_data_coverage.csv": {
+      "bytes": 19240,
+      "sha256": "5f385d48231fda12c0ff296fc5f6ef97847a60392d009b21f01056ac93e4d279"
+    },
+    "state_land_data_coverage.json": {
+      "bytes": 40626,
+      "sha256": "d34d5d7b0b543046d5302a84acdb608e91b812ac882007b4ee3f6ac8b08aae0d"
+    },
+    "state_record_portals.csv": {
+      "bytes": 14511,
+      "sha256": "a5543c1a014a1064c41d454569ee4097bd1897f37705f0c70386e2e5106a0fe3"
+    },
+    "state_record_portals.json": {
+      "bytes": 29042,
+      "sha256": "ac538e70805f73839fca4797e82d89d318ad3729327740b9267f80a677758166"
+    }
+  }
+}

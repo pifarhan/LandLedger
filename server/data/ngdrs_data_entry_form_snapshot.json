@@ -1,0 +1,82 @@
+{
+  "dataset": "NGDRS data-entry form State/UT registration activity snapshot (separate from live IGR server feed)",
+  "authority": "Department of Land Resources / National Generic Document Registration System, Government of India",
+  "source": "https://ngdrs.gov.in/NGDRS_Website/data-grid.php?lang=en",
+  "sourcePageSnapshotAt": "2026-08-10",
+  "retrievedAt": "2026-11-13",
+  "scope": "A separately maintained manual data-entry table. Each row carries its own historical data period/last-updated date. It is not merged into the 26-jurisdiction live IGR feed, and its values are not added to the current NGDRS national totals.",
+  "coverage": {
+    "masterJurisdictions": 36,
+    "records": 5,
+    "states": [
+      "Kerala",
+      "Madhya Pradesh",
+      "Sikkim",
+      "Tamil Nadu",
+      "Uttar Pradesh"
+    ]
+  },
+  "records": [
+    {
+      "state": "Kerala",
+      "stateCode": "KL",
+      "system": "PEARL",
+      "sroOffices": 315,
+      "documentsSubmitted": 2610,
+      "appointments": 2610,
+      "documentsRegistered": 2610,
+      "revenueCollectionLakh": 1201.56,
+      "dataSince": "Not separately specified on row",
+      "lastUpdated": "2024-10-08"
+    },
+    {
+      "state": "Madhya Pradesh",
+      "stateCode": "MP",
+      "system": "Sampada",
+      "sroOffices": 234,
+      "documentsSubmitted": 1531,
+      "appointments": 1845,
+      "documentsRegistered": 1531,
+      "revenueCollectionLakh": 168.08,
+      "dataSince": "2022-12-14",
+      "lastUpdated": "2025-03-16"
+    },
+    {
+      "state": "Sikkim",
+      "stateCode": "SK",
+      "system": "ILRMS",
+      "sroOffices": 5,
+      "documentsSubmitted": 62,
+      "appointments": 16,
+      "documentsRegistered": 12,
+      "revenueCollectionLakh": 3.68,
+      "dataSince": "2023-02-28",
+      "lastUpdated": "2026-02-25"
+    },
+    {
+      "state": "Tamil Nadu",
+      "stateCode": "TN",
+      "system": "TNREGINET",
+      "sroOffices": 580,
+      "documentsSubmitted": 17315,
+      "appointments": 18420,
+      "documentsRegistered": 17315,
+      "revenueCollectionLakh": 13931.44,
+      "dataSince": "2023-01-24",
+      "lastUpdated": "2023-04-24"
+    },
+    {
+      "state": "Uttar Pradesh",
+      "stateCode": "UP",
+      "system": "PRERNA",
+      "sroOffices": 372,
+      "documentsSubmitted": 17273,
+      "appointments": 1476,
+      "documentsRegistered": 17273,
+      "revenueCollectionLakh": 10350.97,
+      "dataSince": "2023-02-28",
+      "lastUpdated": "2023-03-15"
+    }
+  ],
+  "warning": "These rows are old and their last-updated dates vary from 2023 to 2026. Treat them as a separate source table, not as current live State registration totals."
+}

@@ -1,0 +1,195 @@
+{
+  "dataset": "Selected GNCTD land acquisition award PDF facts extracted and manually reconciled for research prototype",
+  "generatedOn": "2026-11-14",
+  "authority": "Department of Revenue, Government of NCT of Delhi",
+  "method": "Reviewed official award PDFs and extracted citation-backed project, notification, parcel-list, area, status-quo and compensation facts. No individual claimant names are copied. OCR/layout ambiguities remain explicitly flagged. This is not a complete Delhi or India acquisition register.",
+  "records": [
+    {
+      "recordId": "DL-BAMNOLI-AWARD-1-07-08",
+      "stateCode": "DL",
+      "state": "NCT of Delhi",
+      "district": "South West Delhi",
+      "village": "Bamnoli",
+      "awardNumber": "AWARD-1(07-08)",
+      "projectName": "Dwarka Phase II, Planned Development of Delhi",
+      "acquisitionNature": "Permanent",
+      "underAct": "Land Acquisition Act, 1894",
+      "section4NotificationDate": "2004-11-04",
+      "section6NotificationDate": "2005-10-31",
+      "awardDate": "2007-08-06",
+      "acquisitionStage": "AWARD_ISSUED",
+      "landExtentAsPublished": "2,100 Bigha 06 Biswas (includes 640 Bigha 12 Biswas covered by High Court status-quo orders)",
+      "landExtentHectare": null,
+      "compensationAmountInr": 1117572745.0,
+      "currency": "INR",
+      "compensationBreakdown": {
+        "landMarketValueBlockAAndBInr": 685316441.0,
+        "solatium30PercentInr": 205594932.0,
+        "additional12PercentInr": 226661372.0,
+        "grandTotalInr": 1117572745.0
+      },
+      "blockMarketValue": {
+        "blockAArea": "2,049 Bigha 13 Biswas",
+        "blockARatePerAcreInr": 1570000,
+        "blockBarea": "50 Bigha 13 Biswas",
+        "blockBRatePerAcreInr": 1413000
+      },
+      "parcelIdentifiersInStatusQuoSchedule": [
+        "8//24",
+        "22//4",
+        "22//5",
+        "22//6",
+        "22//7",
+        "22//15",
+        "22//16",
+        "22//21",
+        "25//2/1",
+        "26//23",
+        "26//24",
+        "26//25",
+        "21//24",
+        "21//25",
+        "26//14",
+        "26//15",
+        "25//10/2",
+        "25//11",
+        "25//19",
+        "25//20",
+        "25//21",
+        "26//4",
+        "26//7",
+        "26//16",
+        "26//17"
+      ],
+      "statusQuoAreaAsPublished": "640 Bigha 12 Biswas",
+      "possessionStatus": "NOT_TAKEN_FOR_STATUS_QUO_SCHEDULE",
+      "titleMutationStatus": "NO_CHANGE_UNTIL_STATUS_QUO_VACATED",
+      "statusNotes": "Award could be announced, but possession could not be taken for land under the High Court status-quo orders; the award states title could not change until possession and further court direction/vacation of stay. Do not infer the entire award area was possessed.",
+      "sourceAuthority": "Land Acquisition Collector, District South West, Government of NCT of Delhi",
+      "sourceIndexUrl": "https://revenue.delhi.gov.in/land-acquisition/7227",
+      "sourceDocumentUrl": "https://revenue.delhi.gov.in/sites/default/files/revenue/land-acquisition-award/bamnoli-1_07-08.pdf",
+      "sourceDocumentEvidence": [
+        {
+          "page": 0,
+          "fields": [
+            "Village Bamnoli",
+            "permanent acquisition",
+            "Dwarka Phase II",
+            "Section 4 notification date 04-Nov-2004",
+            "Section 6 notification date 31-Oct-2005"
+          ]
+        },
+        {
+          "page": 4,
+          "fields": [
+            "Award extent 2,100 Bigha 06 Biswas",
+            "640 Bigha 12 Biswas status quo",
+            "possession/title cannot change until court direction"
+          ]
+        },
+        {
+          "page": 5,
+          "fields": [
+            "parcel/khasra schedule begins"
+          ]
+        },
+        {
+          "page": 35,
+          "fields": [
+            "compensation summary total INR 1,117,572,745"
+          ]
+        }
+      ],
+      "sourceReadStatus": "HUMAN_REVIEWED_FROM_OFFICIAL_PDF",
+      "dataQuality": "AREA_AND_COMPENSATION_EXTRACTED_FROM_AWARD_SUMMARY; BIGHAS_NOT_CONVERTED_TO_HECTARES; PARCELS_ARE_A_SUBSET_OF_STATUS_QUO_SCHEDULE",
+      "privacy": "Claimant/individual names omitted. Parcel identifiers and court status retained as source document facts.",
+      "titleAdjudication": "NOT_A_TITLE_ADJUDICATION"
+    },
+    {
+      "recordId": "DL-BHARTHAL-AWARD-26-02-03",
+      "stateCode": "DL",
+      "state": "NCT of Delhi",
+      "district": "South West Delhi",
+      "village": "Bharthal",
+      "awardNumber": "AWARD-26(02-03)",
+      "projectName": "Dwarka Phase II, Planned Development of Delhi",
+      "acquisitionNature": "Permanent",
+      "underAct": "Land Acquisition Act, 1894",
+      "section4NotificationDate": "2000-12-13",
+      "section6NotificationDate": "2001-12-07",
+      "awardDate": "2002-10-22",
+      "acquisitionStage": "AWARD_ISSUED",
+      "landExtentAsPublished": "2,904 Bigha 16 Biswas notified under Section 6; award notes discrepancies between notification and field-book area, and defers compensation for certain area pending corrigendum.",
+      "landExtentHectare": null,
+      "compensationAmountInr": 1255465435.34,
+      "currency": "INR",
+      "parcelIdentifiersInStatusQuoSchedule": [
+        "40//21",
+        "41//25/2",
+        "52//1",
+        "24//22",
+        "23/1",
+        "24/1",
+        "25//2",
+        "8/2",
+        "9"
+      ],
+      "statusQuoAreaAsPublished": null,
+      "possessionStatus": "PARTIAL_POSSESSION_AND_STATUS_QUO_DETAILS_IN_AWARD",
+      "titleMutationStatus": "NOT_INFERRED",
+      "statusNotes": "Award describes writ-petition-specific status-quo orders, including one instance where 3 Bigha physical possession had already been taken before status quo. Do not treat whole project as possession-complete. The award records a discrepancy between notified and field-book areas; area reconciliation/corrigendum must be checked before a canonical numeric area is used.",
+      "sourceAuthority": "Land Acquisition Collector, District South-West, Government of NCT of Delhi",
+      "sourceIndexUrl": "https://revenue.delhi.gov.in/land-acquisition/7280",
+      "sourceDocumentUrl": "https://revenue.delhi.gov.in/sites/default/files/revenue/land-acquisition-award/bharthal_26_02-03.pdf",
+      "sourceDocumentEvidence": [
+        {
+          "page": 8,
+          "fields": [
+            "Village Bharthal",
+            "Award 26(02-03)",
+            "Dwarka Phase-II",
+            "Section 4 notification date 13-Dec-2000",
+            "Section 6 notification date 07-Dec-2001"
+          ]
+        },
+        {
+          "page": 8,
+          "fields": [
+            "Notified area 2,904 Bigha 16 Biswas; discrepancy with field-book area"
+          ]
+        },
+        {
+          "page": 20,
+          "fields": [
+            "CWP-wise khasra identifiers and status quo status"
+          ]
+        },
+        {
+          "page": 40,
+          "fields": [
+            "Compensation summary total INR 1,255,465,435.34"
+          ]
+        },
+        {
+          "page": 41,
+          "fields": [
+            "Some possession had already been taken before one status-quo order"
+          ]
+        }
+      ],
+      "sourceReadStatus": "HUMAN_REVIEWED_FROM_OFFICIAL_PDF",
+      "dataQuality": "AREA_DISCREPANCY_FLAGGED; ORIGINAL_NOTIFIED_AREA_PRESERVED; NO_HECTARE_CONVERSION",
+      "privacy": "Claimant/individual names omitted. Parcel identifiers and court status retained as source document facts.",
+      "titleAdjudication": "NOT_A_TITLE_ADJUDICATION"
+    }
+  ],
+  "limitations": [
+    "Only two selected Delhi award PDFs are fully extracted in this curated dataset; 19 award PDFs are indexed in the catalogue but not all have been parsed.",
+    "Award record identifies acquisition-stage facts, not current owner or mutation status.",
+    "Khasra schedule entries are source-level parcel identifiers, not proof of present ownership.",
+    "Area units are left in Bigha-Biswa; no universal conversion factor is applied.",
+    "Compensation awarded is not proof that each person has been paid.",
+    "No personal claimant names, contact details or identity numbers are copied.",
+    "This selected public dataset is not a complete all-India land-acquisition register."
+  ]
+}

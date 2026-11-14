@@ -1,0 +1,135 @@
+{
+  "dataset": "LandLedger Government Data Source Registry",
+  "version": "1.2.0",
+  "generatedOn": "2026-11-14",
+  "sources": [
+    {
+      "id": "dilrmp_clr_state_level",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "DILRMP CLR State/UT-wise progress and land owner aggregates",
+      "url": "https://dilrmp.gov.in/physicalProgressReports/clr/state-level",
+      "dataFile": "dilrmp_state_level_current.json",
+      "coverage": "36 State/UT aggregate rows",
+      "records": "Aggregate RoR, land-owner counts, gender-based ownership totals and administrative progress; not individual names."
+    },
+    {
+      "id": "dilrmp_ror_directory",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "Land Records State/UT RoR Available on Web Details",
+      "url": "https://dilrmp.gov.in/dilrmpold/State-RoR-Web",
+      "dataFile": "state_land_data_coverage.json",
+      "coverage": "Dated State/UT portal directory metadata",
+      "records": "Official portal hyperlinks/statuses; no bulk-access guarantee."
+    },
+    {
+      "id": "lacrris_dashboard",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "LACRRIS national dashboard",
+      "url": "https://larr.dolr.gov.in/faces/common/dashboard.xhtml",
+      "dataFile": "land_acquisition_lacrris_snapshot.json",
+      "coverage": "National acquisition KPI snapshot",
+      "records": "Projects, project segments, acquired hectares, displaced/affected families, compensation and R&R totals."
+    },
+    {
+      "id": "lacrris_state_report",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "LACRRIS State/UT-wise land acquisition progress report",
+      "url": "https://larr.dolr.gov.in/faces/public/rptLandAcqProg2.xhtml",
+      "dataFile": "land_acquisition_lacrris_snapshot.json",
+      "coverage": "36 state options visible in interactive selector; detailed query requires state/project/district selection",
+      "records": "Project, district, area, Act, notification/award/payment/possession dates, family counts and compensation amounts."
+    },
+    {
+      "id": "banglarbhumi_wb",
+      "publisher": "Land & Land Reforms and Refugee Relief & Rehabilitation Department, Government of West Bengal",
+      "title": "Banglarbhumi citizen services and RS-LR Plot Information",
+      "url": "https://banglarbhumi.gov.in/",
+      "dataFile": null,
+      "coverage": "State portal / individual query, login or captcha may apply",
+      "records": "Official RS-LR plot information, mutation status, khatian/plot services; no bulk open dataset assumed."
+    },
+    {
+      "id": "wb_urban_know_property",
+      "publisher": "Department of Urban Development & Municipal Affairs, Government of West Bengal",
+      "title": "Know Your Property procedure (Property Records and Encumbrances)",
+      "url": "https://udma.wb.gov.in/page/cms/know_your_property_procedure_a353e3",
+      "dataFile": null,
+      "coverage": "OTP-based citizen access",
+      "records": "Khatian/plot lookup integration described by State department; not open bulk API."
+    },
+    {
+      "id": "ngdrs_registration",
+      "publisher": "Department of Land Resources / NGDRS",
+      "title": "NGDRS National registration activity dashboard",
+      "url": "https://ngdrs.gov.in/NGDRS_Website/data-grid.php?lang=en",
+      "dataFile": "ngdrs_registration_activity.json",
+      "coverage": "26 jurisdictions reporting in current snapshot",
+      "records": "Aggregate registration activity only."
+    },
+    {
+      "id": "survey_india_abdb",
+      "publisher": "Survey of India",
+      "title": "Administrative Boundary Database",
+      "url": "https://surveyofindia.gov.in/pages/administrative-boundary-data-base-abdb-",
+      "dataFile": "abdb/abdb-hierarchy.json",
+      "coverage": "State/district/sub-district administrative hierarchy",
+      "records": "Not a cadastral parcel or ownership dataset."
+    },
+    {
+      "id": "dilrmp_3_0_land_stack_guidelines",
+      "publisher": "Department of Land Resources, Government of India",
+      "title": "DILRMP 3.0 Operational Guidelines (2026-2031) — federated Land Stack, secure APIs and State data custody",
+      "url": "https://cdnbbsr.s3waas.gov.in/s3d69116f8b0140cdeb1f99a4d5096ffe4/uploads/2026/08/20260825865791200.pdf",
+      "coverage": "National policy framework; secure API-based integration is subject to applicable laws, policies, privacy and security; datasets remain owned/custodied by States/UTs."
+    },
+    {
+      "id": "rbih_nextgen_lrs",
+      "publisher": "Reserve Bank Innovation Hub",
+      "title": "Unified Lending Interface — Next-Gen Land Records Service",
+      "url": "https://docs.rbihub.in/unified-lending-interface/next-gen/land-records",
+      "coverage": "Single-parcel query service across 12 State government backends; owner, parcel, area, crop and encumbrance fields in response; institutional onboarding required."
+    },
+    {
+      "id": "rbih_lrs_v3",
+      "publisher": "Reserve Bank Innovation Hub",
+      "title": "LRS API integration guide v3",
+      "url": "https://docs.rbihub.in/unified-lending-interface/getting-started/service-integration/lrs",
+      "coverage": "State-wise lender integration guide for 14 States; consent-id required on master-data and land-ownership calls. The v3 adapter is not configured in this build."
+    },
+    {
+      "id": "rbih_uli_onboarding",
+      "publisher": "Reserve Bank Innovation Hub",
+      "title": "ULI lender service integration and onboarding requirements",
+      "url": "https://docs.rbihub.in/unified-lending-interface/getting-started/service-integration",
+      "coverage": "Institutional onboarding, IP whitelisting, UAT credentials, subscription and go-live approval."
+    },
+    {
+      "id": "west_bengal_banglarbhumi",
+      "publisher": "Land & Land Reforms and Refugee Relief & Rehabilitation Department, Government of West Bengal",
+      "title": "Banglarbhumi citizen land-record services",
+      "url": "https://banglarbhumi.gov.in/",
+      "coverage": "Citizen portal for RS-LR plot information, ROR requests, plot information and mutation status; not a public nationwide bulk export."
+    },
+    {
+      "id": "india_property_register_api",
+      "publisher": "Billion Insights Ventures Pvt. Ltd. (independent private provider; not Government of India)",
+      "title": "India Property Register API — published State parcel holders and land-record references",
+      "url": "https://indiapropertyregister.com/api/docs",
+      "termsUrl": "https://indiapropertyregister.com/terms",
+      "coverage": "Provider documentation states plot records loaded for 28 of 36 States/UTs; data depth and last-read dates vary by layer and jurisdiction.",
+      "records": "On-demand village/plot lookup and individual plot details, including holders as published, shares, source and read date where available. No bulk export is imported or bundled. Provider states results are not certified copies or proof of legal title.",
+      "verificationStatus": "PROVIDER_DOCUMENTATION_REVIEWED_NOT_INDEPENDENTLY_AUDITED"
+    }
+  ],
+  "policy": {
+    "noUnauthorisedScraping": true,
+    "doNotBypassCaptchaOtpOrLogin": true,
+    "noSyntheticOwnerOrAcquisitionRows": true,
+    "absenceOfRowDoesNotMeanNoOwnershipOrNoAcquisition": true,
+    "allImportedRowsRequireSourceUrlAndRetrievalTimestamp": true,
+    "dilrmp3FederatedCustody": "The DILRMP 3.0 framework uses secure API-based interoperability while each State/UT or concerned department retains ownership and custody of its records.",
+    "uliAccess": "The RBIH/ULI LRS is a credentialed institutional service for supported States; do not treat it as an open bulk download source.",
+    "thirdPartyProviderUse": "Individual on-demand lookups only under the provider terms. Do not bulk-scrape, bulk-export, redistribute/resell, build a competing database, or use for model training/evaluation without written licence.",
+    "thirdPartyRecordsNotGovernmentCertified": "Third-party aggregator results are not official government responses, certified copies or title adjudications. Display their underlying source and read date when provided."
+  }
+}

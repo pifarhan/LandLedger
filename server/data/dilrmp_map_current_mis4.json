@@ -1,0 +1,16 @@
+{
+  "dataset": "DILRMP MIS 4.0 Map Digitization State/UT-wise raw source rows",
+  "authority": "Department of Land Resources, Government of India",
+  "source": "https://www.dilrmp.gov.in/physicalProgressReports/map/state-level",
+  "status": "NOT_YET_CAPTURED",
+  "observedAt": "2026-11-14",
+  "dataAsOf": null,
+  "jurisdictionCount": 36,
+  "coverage": {
+    "stateRows": 0,
+    "distinctStates": 0
+  },
+  "records": [],
+  "sourceColumnSemantics": "The report has multi-row grouped headers. Until a verified live table extract is captured, raw columns are not bundled and numeric field mapping is not inferred.",
+  "scope": "Current MIS 4.0 map-digitisation report schema; not title/ownership rows."
+}
